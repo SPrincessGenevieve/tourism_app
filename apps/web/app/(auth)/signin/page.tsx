@@ -7,6 +7,7 @@ import { Button } from "@workspace/ui/components/button"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { Spinner } from "@workspace/ui/components/spinner"
+import AuthHeader from "@/components/AuthComponents/AuthHeader"
 
 export default function LoginPage() {
   const router = useRouter()
@@ -34,15 +35,16 @@ export default function LoginPage() {
 
   return (
     <div className="flex h-full w-full flex-col gap-8 bg-white">
-      <div>
-        <Logo></Logo>
-        <p className="text-[4.5vh] font-bold">Welcome Back</p>
-        <p className="text-2xl max-[667px]:text-[16px]">
-          Continue your adventure with us
-        </p>
-      </div>
+      <AuthHeader
+        title={"Welcome Back"}
+        desc={"Continue your adventure with us"}
+      ></AuthHeader>
       <div className="flex flex-col gap-4">
-        <Input label="Email Address" placeholder="juan@example.com"></Input>
+        <Input
+          type="email"
+          label="Email Address"
+          placeholder="juan@example.com"
+        ></Input>
         <Input label="Password" placeholder="* * * * * * * *"></Input>
         <div className="flex justify-end">
           <Button

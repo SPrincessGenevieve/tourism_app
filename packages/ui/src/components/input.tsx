@@ -45,7 +45,7 @@ export default function Input({
             onClick={() => setShowPassword((prev) => !prev)}
             className="absolute top-1/2 right-3 -translate-y-1/2 text-xs text-gray-500"
           >
-            {showPassword ? <Eye></Eye> : <EyeClosed></EyeClosed>}
+            {showPassword ? <EyeClosed></EyeClosed> : <Eye></Eye>}
           </button>
         )}
       </div>
