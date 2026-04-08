@@ -17,7 +17,7 @@ export default function LoginPage() {
 
   const handleSignUp = () => {
     setLoading("signup")
-    router.push("/signup")
+    router.push("/sign-up")
   }
 
   const handleLogin = () => {

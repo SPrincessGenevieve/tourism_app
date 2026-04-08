@@ -11,7 +11,7 @@ export default function AuthHeader({ desc, title }: AuthT) {
     <div>
       <Logo></Logo>
       <p className="text-[4.5vh] font-bold">{title}</p>
-      <p className="text-2xl max-[667px]:text-[16px]">{desc}</p>
+      <p className="text-[2.5vh] max-[667px]:text-[16px]">{desc}</p>
     </div>
   )
 }
