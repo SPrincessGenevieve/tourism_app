@@ -18,7 +18,7 @@ export default function ResetPassPage() {
 
   const handleReset = () => {
     setLoading("reset")
-    router.push("/signin")
+    router.push("/sign-in")
   }
 
   return (
