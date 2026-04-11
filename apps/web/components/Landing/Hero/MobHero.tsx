@@ -47,17 +47,22 @@ export default function MobHero() {
     load()
   }, [index])
 
-  useLayoutEffect(() => {
-    if (containerRef.current && itemsRef.current[0]) {
-      const container = containerRef.current
-      const firstItem = itemsRef.current[0]
+  useEffect(() => {
+    const container = containerRef.current
+    if (!container) return
 
+    const observer = new ResizeObserver(() => {
       setContainerWidth(container.offsetWidth)
-      const gap = 16 // Tailwind gap-4 = 16px
-      setItemWidth(firstItem.offsetWidth + gap)
 
-      setReady(true)
-    }
+      if (itemsRef.current[0]) {
+        const gap = 16
+        setItemWidth(itemsRef.current[0].offsetWidth + gap)
+      }
+    })
+
+    observer.observe(container)
+
+    return () => observer.disconnect()
   }, [])
 
   const [xOffset, setXOffset] = useState(0)
@@ -112,8 +117,19 @@ export default function MobHero() {
       <div className="absolute inset-0 mask-[linear-gradient(to_bottom,transparent,black)] backdrop-blur-3xl"></div>
       <div className="z-20 h-[50%] w-full text-8xl">
         <div className="flex h-12 w-full items-center justify-between p-2">
-          <Logo dark={false}></Logo>
-          <IconMenu className="text-white"></IconMenu>
+          {containerWidth > 875 ? (
+            <HeaderLanding></HeaderLanding>
+          ) : (
+            <motion.div
+              className="flex h-full w-full items-center justify-between"
+              initial={{ y: -10, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Logo dark={false}></Logo>
+              <IconMenu className="text-white"></IconMenu>{" "}
+            </motion.div>
+          )}
         </div>
         <AnimatePresence mode="wait">
           <motion.div
@@ -124,10 +140,10 @@ export default function MobHero() {
             transition={{ duration: 0.5, ease: "easeInOut" }}
             className="flex flex-col gap-4 p-4"
           >
-            <motion.p className="text-[14vw] font-semibold text-white uppercase">
+            <motion.p className="text-[13vw] font-semibold text-white uppercase">
               {HeroPackage[index]?.provinceCity}
             </motion.p>
-            <motion.p className="text-[2vw] text-white max-[590px]:text-sm">
+            <motion.p className="max-w-200 text-[16px] text-white max-[590px]:text-sm">
               {HeroPackage[index]?.packageOverview}
             </motion.p>
             <Button className="w-30">
