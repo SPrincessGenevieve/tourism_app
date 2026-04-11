@@ -1,10 +1,21 @@
 import { Footprints } from "lucide-react"
 import React from "react"
 
-export default function Logo() {
+type LogoT = {
+  dark?: boolean
+}
+
+export default function Logo({ dark = true }: LogoT) {
   return (
-    <div className="flex items-center gap-2">
-      <Footprints></Footprints> <p className="font-bold">PH TRAVEL</p>
+    <div
+      className={`z-5 flex items-center gap-2 ${dark ? "text-black" : "text-white"}`}
+    >
+      <Footprints></Footprints>{" "}
+      <p
+        className={`text-[1rem] font-bold ${dark ? "text-black" : "text-white"}`}
+      >
+        PH TRAVEL
+      </p>
     </div>
   )
 }
