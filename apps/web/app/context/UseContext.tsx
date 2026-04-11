@@ -12,7 +12,7 @@ import {
 type UserContextType = {
   token: string
   sidebar: sidebarT
-
+  width: number
   setUserDetails: (
     details:
       | Partial<UserContextType>
@@ -26,6 +26,7 @@ const defaultUserContext: UserContextType = {
     opacity: 0,
     y: `-100%`,
   },
+  width: 0,
   setUserDetails: () => {},
 }
 
