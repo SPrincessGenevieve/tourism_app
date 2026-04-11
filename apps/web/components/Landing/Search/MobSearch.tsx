@@ -39,7 +39,7 @@ export default function MobSearch() {
               opacity: 1,
             }}
             transition={{ duration: 1, ease: "easeInOut" }}
-            className={`flex flex-wrap items-center justify-center gap-2 text-center ${width > 620 ? "max-w-120 text-5xl" : "text-[9vw] leading-8"} font-semibold`}
+            className={`flex flex-wrap items-center justify-center gap-2 text-center ${width > 620 ? "max-w-120 text-4xl" : "text-[9vw] leading-8"} font-semibold`}
           >
             Visit The Most{" "}
             <span className="text-cyan-300">Beautiful Places</span> In The

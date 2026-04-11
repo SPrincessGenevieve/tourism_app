@@ -232,6 +232,7 @@ export default function WebHero() {
                   className="h-[85%] w-full rounded-2xl object-cover shadow-[0_0_30px_1px_black]"
                   width={400}
                   height={400}
+                  loading="eager"
                 ></Image>
               </motion.div>
             ))}

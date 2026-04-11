@@ -196,6 +196,7 @@ export default function MobHero() {
                   alt="thumbnail"
                   className="h-[85%] w-full rounded-2xl object-cover shadow-[0_0_30px_1px_black]"
                   width={400}
+                  loading="eager"
                   height={400}
                 />
               </motion.div>
