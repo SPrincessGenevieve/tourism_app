@@ -7,16 +7,13 @@ import { IconMenu, IconStarFilled } from "@tabler/icons-react"
 import HeaderLanding from "../HeaderLanding"
 import { HeroPackage } from "@/lib/MockData"
 import Logo from "@workspace/ui/components/logo"
+import MobileSidebar from "../MobileSidebar"
+import { useUserContext } from "@/app/context/UseContext"
 
 export default function MobHero() {
+  const { setUserDetails } = useUserContext()
+
   const containerRef = React.useRef<HTMLDivElement>(null)
-  const [yPx, setYPx] = useState(0)
-  const [location, setLocation] = useState(1)
-  const [screenHeight, setScreenHeight] = useState(0)
-  const [clicked, setClicked] = useState<{ x: number; opacity: number }>({
-    x: 0,
-    opacity: 1,
-  })
   const itemsRef = useRef<HTMLDivElement[]>([])
   const [index, setIndex] = useState(0)
   const [containerWidth, setContainerWidth] = useState(0)
@@ -127,7 +124,7 @@ export default function MobHero() {
               transition={{ duration: 0.5 }}
             >
               <Logo dark={false}></Logo>
-              <IconMenu className="text-white"></IconMenu>{" "}
+              <MobileSidebar></MobileSidebar>
             </motion.div>
           )}
         </div>

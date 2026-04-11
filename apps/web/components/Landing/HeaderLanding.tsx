@@ -4,25 +4,7 @@ import React from "react"
 import Logo from "@workspace/ui/components/logo"
 import { Button } from "@workspace/ui/components/button"
 import { motion } from "motion/react"
-
-const pages = [
-  {
-    link: "",
-    label: "Home",
-  },
-  {
-    link: "",
-    label: "Package",
-  },
-  {
-    link: "",
-    label: "Special Deals",
-  },
-  {
-    link: "/sign-in",
-    label: "Login",
-  },
-]
+import { pages } from "@/lib/pages"
 
 export default function HeaderLanding() {
   return (
