@@ -9,7 +9,7 @@ type SectionT = {
 
 export default function SectionTitle({ title, desc }: SectionT) {
   return (
-    <div className="flex w-full flex-col items-center justify-center">
+    <div className="my-8 flex w-full flex-col items-center justify-center">
       <motion.p
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}

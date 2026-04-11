@@ -5,6 +5,7 @@ import SectionTitle from "./SectionTitle"
 import { Packages } from "@/lib/MockData"
 import { useUserContext } from "@/app/context/UseContext"
 import {
+  IconArrowRight,
   IconClock,
   IconMapPin,
   IconStarFilled,
@@ -22,7 +23,7 @@ export default function PackageSection() {
         title={"Featured Tour Packages"}
         desc={"Handpicked destinations for your perfect gateway"}
       ></SectionTitle>
-      <div className="flex w-full max-w-280 flex-wrap justify-center gap-8">
+      <div className="flex w-full max-w-[90%] flex-wrap justify-center gap-8">
         {Packages.slice(0, 6).map((item, i) => (
           <motion.div
             key={i}
@@ -40,7 +41,7 @@ export default function PackageSection() {
               bounce: 40,
               delay: i / 6,
             }}
-            className={`relative flex flex-col overflow-hidden bg-[pink] pb-12 ${width > 455 ? "w-80" : "w-80"} min-h-50 rounded-xl border bg-white shadow-xl shadow-primary-blue-400/30`}
+            className={`relative flex flex-col overflow-hidden bg-[pink] pb-12 ${width > 455 ? "w-100" : "w-full"} min-h-50 rounded-xl border bg-white shadow-xl shadow-primary-blue-400/30`}
           >
             <div className="relative flex h-60 w-full items-start justify-between overflow-hidden p-2">
               <motion.div
@@ -135,6 +136,11 @@ export default function PackageSection() {
             </div>
           </motion.div>
         ))}
+      </div>
+      <div>
+        <Button variant={"outline"}>
+          View all packages <IconArrowRight></IconArrowRight>
+        </Button>
       </div>
     </div>
   )
