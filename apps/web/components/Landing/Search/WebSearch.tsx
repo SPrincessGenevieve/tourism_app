@@ -2,7 +2,7 @@
 import { motion } from "motion/react"
 import { Button } from "@workspace/ui/components/button"
 import Image from "next/image"
-import React from "react"
+import React, { useRef } from "react"
 import {
   InputGroup,
   InputGroupAddon,
@@ -17,6 +17,8 @@ import {
 import { SearchFields } from "@/lib/lib"
 
 export default function WebSearch() {
+  const hasAnimated = useRef(false)
+
   const [travelDate, setTravelDate] = React.useState<Date | undefined>(
     new Date()
   )
@@ -24,8 +26,12 @@ export default function WebSearch() {
   return (
     <div className="relative flex min-h-screen w-full items-center justify-center">
       <motion.div
-        initial={{ scale: 0 }}
+        initial={hasAnimated.current ? { scale: 1 } : { scale: 0 }}
         whileInView={{ scale: 1 }}
+        viewport={{ once: true }}
+        onViewportEnter={() => {
+          hasAnimated.current = true
+        }}
         transition={{
           type: "spring",
           stiffness: 90,
@@ -47,9 +53,20 @@ export default function WebSearch() {
         <div className="flex w-full flex-col gap-4">
           <div className="flex flex-col gap-4">
             <motion.p
-              initial={{
-                x: -20,
-                opacity: 0,
+              initial={
+                hasAnimated
+                  ? {
+                      x: -20,
+                      opacity: 0,
+                    }
+                  : {
+                      x: 0,
+                      opacity: 1,
+                    }
+              }
+              viewport={{ once: true }}
+              onViewportEnter={() => {
+                hasAnimated.current = true
               }}
               whileInView={{
                 x: 0,
@@ -63,9 +80,12 @@ export default function WebSearch() {
               Philippines
             </motion.p>
             <motion.p
-              initial={{
-                x: -40,
-                opacity: 0,
+              initial={
+                hasAnimated ? { x: -40, opacity: 0 } : { x: 0, opacity: 1 }
+              }
+              viewport={{ once: true }}
+              onViewportEnter={() => {
+                hasAnimated.current = true
               }}
               whileInView={{
                 x: 0,
@@ -77,9 +97,12 @@ export default function WebSearch() {
             </motion.p>
           </div>
           <motion.div
-            initial={{
-              x: -60,
-              opacity: 0,
+            initial={
+              hasAnimated ? { x: -60, opacity: 0 } : { x: 0, opacity: 1 }
+            }
+            viewport={{ once: true }}
+            onViewportEnter={() => {
+              hasAnimated.current = true
             }}
             whileInView={{
               x: 0,

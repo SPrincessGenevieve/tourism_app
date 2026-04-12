@@ -16,10 +16,11 @@ import {
   InputGroupInput,
 } from "@workspace/ui/components/input-group"
 import Image from "next/image"
-import React from "react"
+import React, { useRef } from "react"
 import { motion } from "motion/react"
 
 export default function MobSearch() {
+  const hasAnimated = useRef(false)
   const { width } = useUserContext()
   const [travelDate, setTravelDate] = React.useState<Date | undefined>(
     new Date()
@@ -30,9 +31,20 @@ export default function MobSearch() {
       <div className="z-20 flex h-full w-full flex-col items-center justify-center p-8">
         <div className="flex w-full flex-col items-center justify-center gap-4">
           <motion.p
-            initial={{
-              x: -20,
-              opacity: 0,
+            initial={
+              hasAnimated.current
+                ? {
+                    x: -20,
+                    opacity: 0,
+                  }
+                : {
+                    x: 0,
+                    opacity: 1,
+                  }
+            }
+            viewport={{ once: true }}
+            onViewportEnter={() => {
+              hasAnimated.current = true
             }}
             whileInView={{
               x: 0,
@@ -46,9 +58,20 @@ export default function MobSearch() {
             Philippines
           </motion.p>
           <motion.p
-            initial={{
-              x: -40,
-              opacity: 0,
+            initial={
+              hasAnimated.current
+                ? {
+                    x: -40,
+                    opacity: 0,
+                  }
+                : {
+                    x: 0,
+                    opacity: 1,
+                  }
+            }
+            viewport={{ once: true }}
+            onViewportEnter={() => {
+              hasAnimated.current = true
             }}
             whileInView={{
               x: 0,
@@ -63,7 +86,11 @@ export default function MobSearch() {
       </div>
       <div className="relative flex w-full max-w-150 flex-col items-center justify-center gap-4">
         <motion.div
-          initial={{ scale: 0 }}
+          initial={hasAnimated.current ? { scale: 0 } : { scale: 1 }}
+          viewport={{ once: true }}
+          onViewportEnter={() => {
+            hasAnimated.current = true
+          }}
           whileInView={{ scale: 1 }}
           transition={{
             type: "spring",
@@ -82,9 +109,20 @@ export default function MobSearch() {
           ></Image>
         </motion.div>
         <motion.div
-          initial={{
-            x: -60,
-            opacity: 0,
+          initial={
+            hasAnimated.current
+              ? {
+                  x: -60,
+                  opacity: 0,
+                }
+              : {
+                  x: 0,
+                  opacity: 1,
+                }
+          }
+          viewport={{ once: true }}
+          onViewportEnter={() => {
+            hasAnimated.current = true
           }}
           whileInView={{
             x: 0,

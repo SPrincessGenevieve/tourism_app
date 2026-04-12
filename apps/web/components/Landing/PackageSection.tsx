@@ -1,6 +1,6 @@
 "use client"
 
-import React from "react"
+import React, { useRef } from "react"
 import SectionTitle from "./SectionTitle"
 import { Packages } from "@/lib/MockData"
 import { useUserContext } from "@/app/context/UseContext"
@@ -16,6 +16,7 @@ import Image from "next/image"
 import { motion } from "motion/react"
 
 export default function PackageSection() {
+  const hasAnimated = useRef(false)
   const { width } = useUserContext()
   return (
     <div className="flex min-h-screen w-full flex-col items-center gap-8 p-8">
@@ -23,24 +24,30 @@ export default function PackageSection() {
         title={"Featured Tour Packages"}
         desc={"Handpicked destinations for your perfect gateway"}
       ></SectionTitle>
-      <div className="flex w-full max-w-[90%] flex-wrap justify-center gap-8">
+      <motion.div
+        initial={
+          hasAnimated.current
+            ? { scale: 1, opacity: 1 }
+            : { scale: 0.8, opacity: 0 }
+        }
+        whileInView={{
+          scale: 1,
+          opacity: 1,
+        }}
+        viewport={{ once: true }}
+        onViewportEnter={() => {
+          hasAnimated.current = true
+        }}
+        transition={{
+          type: "spring",
+          stiffness: 100,
+          bounce: 40,
+        }}
+        className="flex w-full max-w-[90%] flex-wrap justify-center gap-8"
+      >
         {Packages.slice(0, 6).map((item, i) => (
-          <motion.div
+          <div
             key={i}
-            initial={{
-              scale: 0.8,
-              opacity: 0,
-            }}
-            whileInView={{
-              scale: 1,
-              opacity: 1,
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 100,
-              bounce: 40,
-              delay: i / 6,
-            }}
             className={`relative flex flex-col overflow-hidden bg-[pink] pb-12 ${width > 455 ? "w-100" : "w-full"} min-h-50 rounded-xl border bg-white shadow-xl shadow-primary-blue-400/30`}
           >
             <div className="relative flex h-60 w-full items-start justify-between overflow-hidden p-2">
@@ -134,9 +141,9 @@ export default function PackageSection() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
-      </div>
+      </motion.div>
       <div>
         <Button variant={"outline"}>
           View all packages <IconArrowRight></IconArrowRight>
