@@ -5,6 +5,7 @@ import SearchSection from "@/components/Landing/SearchSection"
 import { useUserContext } from "./context/UseContext"
 import SidebarContent from "@/components/Landing/SidebarContent"
 import PackageSection from "@/components/Landing/PackageSection"
+import DestinationSection from "@/components/Landing/DestinationSection"
 
 export default function Page() {
   const { sidebar, setUserDetails } = useUserContext()
@@ -28,11 +29,12 @@ export default function Page() {
   }, [width])
 
   return (
-    <div className="relative flex min-h-screen w-full flex-col overflow-y-auto">
+    <div className="relative flex min-h-screen w-full flex-col gap-20 overflow-y-auto">
       <HeroSection></HeroSection>
       <SidebarContent></SidebarContent>
       <SearchSection></SearchSection>
       <PackageSection></PackageSection>
+      <DestinationSection></DestinationSection>
     </div>
   )
 }
