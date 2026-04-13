@@ -121,6 +121,7 @@ export default function DestinationSection() {
               }
               viewport={{ once: true }}
               whileInView={{ scale: 1, opacity: 1 }}
+              whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 90, bounce: 20 }}
               onViewportEnter={() => {
                 hasAnimated.current = true

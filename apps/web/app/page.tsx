@@ -6,6 +6,7 @@ import { useUserContext } from "./context/UseContext"
 import SidebarContent from "@/components/Landing/SidebarContent"
 import PackageSection from "@/components/Landing/PackageSection"
 import DestinationSection from "@/components/Landing/DestinationSection"
+import WhyChooseUs from "@/components/Landing/WhyChooseUs"
 
 export default function Page() {
   const { sidebar, setUserDetails } = useUserContext()
@@ -35,6 +36,7 @@ export default function Page() {
       <SearchSection></SearchSection>
       <PackageSection></PackageSection>
       <DestinationSection></DestinationSection>
+      <WhyChooseUs></WhyChooseUs>
     </div>
   )
 }
