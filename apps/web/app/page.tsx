@@ -8,6 +8,8 @@ import PackageSection from "@/components/Landing/PackageSection"
 import DestinationSection from "@/components/Landing/DestinationSection"
 import WhyChooseUs from "@/components/Landing/WhyChooseUs"
 import DealSection from "@/components/Landing/DealSection"
+import TestimoniesSection from "@/components/Landing/TestimoniesSection"
+import SubscribeSection from "@/components/Landing/SubscribeSection"
 
 export default function Page() {
   const { sidebar, setUserDetails } = useUserContext()
@@ -39,6 +41,8 @@ export default function Page() {
       <DestinationSection></DestinationSection>
       <WhyChooseUs></WhyChooseUs>
       <DealSection></DealSection>
+      <TestimoniesSection></TestimoniesSection>
+      <SubscribeSection></SubscribeSection>
     </div>
   )
 }

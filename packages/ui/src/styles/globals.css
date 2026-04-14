@@ -142,6 +142,6 @@
 
 ::-webkit-scrollbar {
   width: 0px;
-  background: transparent; /* Optional: just hide */
+  background: transparent;
   color: #0000005a;
 }

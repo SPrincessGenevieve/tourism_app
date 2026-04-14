@@ -45,7 +45,7 @@ export default function DealSection() {
   const hasAnimated = useRef(false)
 
   return (
-    <div className="flex min-h-screen w-full flex-col items-center justify-center p-8">
+    <div className="z-30 flex min-h-screen w-full flex-col items-center justify-center p-8">
       <div className="flex">
         <motion.div
           animate={{
