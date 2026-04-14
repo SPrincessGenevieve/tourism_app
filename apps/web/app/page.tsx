@@ -10,6 +10,7 @@ import WhyChooseUs from "@/components/Landing/WhyChooseUs"
 import DealSection from "@/components/Landing/DealSection"
 import TestimoniesSection from "@/components/Landing/TestimoniesSection"
 import SubscribeSection from "@/components/Landing/SubscribeSection"
+import FooterSection from "@/components/Landing/FooterSection"
 
 export default function Page() {
   const { sidebar, setUserDetails } = useUserContext()
@@ -43,6 +44,7 @@ export default function Page() {
       <DealSection></DealSection>
       <TestimoniesSection></TestimoniesSection>
       <SubscribeSection></SubscribeSection>
+      <FooterSection></FooterSection>
     </div>
   )
 }
