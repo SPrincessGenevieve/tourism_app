@@ -43,7 +43,6 @@ export default function Page() {
       <WhyChooseUs></WhyChooseUs>
       <DealSection></DealSection>
       <TestimoniesSection></TestimoniesSection>
-      <SubscribeSection></SubscribeSection>
       <FooterSection></FooterSection>
     </div>
   )

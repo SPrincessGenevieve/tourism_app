@@ -5,6 +5,7 @@ import SectionTitle from "./SectionTitle"
 import SmartGradientCard from "../SmartGradientCard"
 import { IconStarFilled } from "@tabler/icons-react"
 import { motion } from "motion/react"
+import SubscribeSection from "./SubscribeSection"
 
 const rating = [
   {
@@ -61,7 +62,20 @@ export default function TestimoniesSection() {
         ></SectionTitle>
         <motion.div className="flex w-full flex-wrap justify-center gap-8">
           {rating.map((item, i) => (
-            <div
+            <motion.div
+              initial={
+                hasAnimated.current
+                  ? { opacity: 1, scale: 1 }
+                  : { opacity: 0, scale: 0.8 }
+              }
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 90,
+                bounce: 0.4,
+                delay: i / 4,
+              }}
+              viewport={{ once: true }}
               key={i}
               className="flex min-h-40 w-full max-w-90 flex-col gap-4 rounded-2xl bg-cyan-100/30 p-8 shadow-[0_2px_30px_0] shadow-cyan-600/20 backdrop-blur-xl"
             >
@@ -110,7 +124,7 @@ export default function TestimoniesSection() {
               <div className="flex flex-col gap-4">
                 <p className="text-sm">{item.comment}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </motion.div>
       </div>
@@ -143,6 +157,7 @@ export default function TestimoniesSection() {
           height={900}
         ></Image>
       </motion.div>
+      <SubscribeSection></SubscribeSection>
     </div>
   )
 }

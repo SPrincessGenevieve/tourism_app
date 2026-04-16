@@ -171,7 +171,7 @@ export default function MobHero() {
                 ref={(el) => {
                   if (el) itemsRef.current[i] = el
                 }}
-                className="rounded-2xlp-2 relative flex h-full w-60 shrink-0 cursor-pointer flex-col gap-2 max-[765px]:w-50"
+                className="relative flex h-full w-55 shrink-0 cursor-pointer flex-col gap-2 rounded-2xl max-[765px]:w-50"
                 onClick={() => {
                   setIndex(i)
                   moveToCenter(i)

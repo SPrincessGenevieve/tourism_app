@@ -12,7 +12,7 @@ export default function () {
           title={"Stay Updated"}
           desc={"Subscribe to get the latest tour deals and travel tips"}
         ></SectionTitle>
-        <div className="flex w-full max-w-200 flex-col gap-4 rounded-3xl bg-cyan-100/30 bg-linear-0 p-8 shadow-2xl shadow-cyan-600/70 backdrop-blur-2xl">
+        <div className="flex w-full max-w-200 flex-col gap-4 rounded-3xl bg-cyan-100/30 bg-linear-0 p-8 shadow-2xl shadow-cyan-600/70 backdrop-blur-sm">
           <div className="flex gap-4 max-[670px]:flex-col">
             <Input
               className="w-full bg-white"
@@ -52,9 +52,7 @@ export default function () {
           maskImage:
             "linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)",
         }}
-      >
-        <SmartGradientCard hoverable={false}></SmartGradientCard>
-      </div>
+      ></div>
     </div>
   )
 }
