@@ -60,22 +60,23 @@ export default function TestimoniesSection() {
           title={"Testimonials"}
           desc={"Tourist Review"}
         ></SectionTitle>
-        <motion.div className="flex w-full flex-wrap justify-center gap-8">
+        <motion.div
+          initial={
+            hasAnimated.current
+              ? { opacity: 1, scale: 1 }
+              : { opacity: 0, scale: 0.8 }
+          }
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 90,
+            bounce: 0.4,
+          }}
+          viewport={{ once: true }}
+          className="flex w-full flex-wrap justify-center gap-8"
+        >
           {rating.map((item, i) => (
             <motion.div
-              initial={
-                hasAnimated.current
-                  ? { opacity: 1, scale: 1 }
-                  : { opacity: 0, scale: 0.8 }
-              }
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                type: "spring",
-                stiffness: 90,
-                bounce: 0.4,
-                delay: i / 4,
-              }}
-              viewport={{ once: true }}
               key={i}
               className="flex min-h-40 w-full max-w-90 flex-col gap-4 rounded-2xl bg-cyan-100/30 p-8 shadow-[0_2px_30px_0] shadow-cyan-600/20 backdrop-blur-xl"
             >
@@ -89,34 +90,33 @@ export default function TestimoniesSection() {
                 ></Image>
                 <div>
                   <p className="text-sm font-semibold">{item.name}</p>
-                  <div className="flex gap-1">
+                  <motion.div
+                    initial={
+                      hasAnimated
+                        ? { scale: 0.8, opacity: 0 }
+                        : { scale: 1, opacity: 1 }
+                    }
+                    whileInView={{
+                      scale: 1,
+                      opacity: 1,
+                    }}
+                    transition={{
+                      stiffness: 80,
+                      bounce: 95,
+                      type: "spring",
+                    }}
+                    viewport={{ once: true }}
+                    className="flex gap-1"
+                  >
                     {[...Array(item.rating)].map((_, ii) => (
-                      <motion.div
-                        key={ii}
-                        initial={
-                          hasAnimated
-                            ? { scale: 0.8, opacity: 0 }
-                            : { scale: 1, opacity: 1 }
-                        }
-                        whileInView={{
-                          scale: 1,
-                          opacity: 1,
-                        }}
-                        transition={{
-                          stiffness: 80,
-                          bounce: 95,
-                          type: "spring",
-                          delay: ii / 5,
-                        }}
-                        viewport={{ once: true }}
-                      >
+                      <motion.div key={ii}>
                         <IconStarFilled
                           size={16}
                           className="text-yellow-400"
                         ></IconStarFilled>
                       </motion.div>
                     ))}
-                  </div>
+                  </motion.div>
                 </div>
               </div>
               <p className="text-sm font-medium text-black">{item.package}</p>
