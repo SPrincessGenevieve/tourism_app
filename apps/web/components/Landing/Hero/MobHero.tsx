@@ -3,12 +3,10 @@ import { motion, AnimatePresence } from "motion/react"
 import { Button } from "@workspace/ui/components/button"
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
-import { IconMenu, IconStarFilled } from "@tabler/icons-react"
-import HeaderLanding from "../HeaderLanding"
+import { IconStarFilled } from "@tabler/icons-react"
 import { HeroPackage } from "@/lib/MockData"
-import Logo from "@workspace/ui/components/logo"
-import MobileSidebar from "../MobileSidebar"
 import { useUserContext } from "@/app/context/UseContext"
+import Sidebar from "@/components/Sidebar"
 
 export default function MobHero() {
   const { setUserDetails } = useUserContext()
@@ -112,22 +110,9 @@ export default function MobHero() {
       <div className="absolute top-0 left-0 z-0 h-screen w-full bg-linear-30 from-black/70 from-35% to-transparent to-70%"></div>
       <div className="absolute top-0 left-0 z-0 h-screen w-full bg-linear-180 from-black/70 from-2% to-transparent to-20%"></div>
       <div className="absolute inset-0 mask-[linear-gradient(to_bottom,transparent,black)] backdrop-blur-3xl"></div>
+
       <div className="z-20 h-[50%] w-full text-8xl">
-        <div className="flex h-12 w-full items-center justify-between p-2">
-          {containerWidth > 875 ? (
-            <HeaderLanding></HeaderLanding>
-          ) : (
-            <motion.div
-              className="flex h-full w-full items-center justify-between"
-              initial={{ y: -10, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <Logo dark={false}></Logo>
-              <MobileSidebar></MobileSidebar>
-            </motion.div>
-          )}
-        </div>
+        <Sidebar containerWidth={containerWidth} index={index}></Sidebar>
         <AnimatePresence mode="wait">
           <motion.div
             key={index}
@@ -135,7 +120,7 @@ export default function MobHero() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="flex flex-col gap-4 p-4"
+            className="mt-10 flex flex-col gap-4 p-4"
           >
             <motion.p className="text-[13vw] font-semibold text-white uppercase">
               {HeroPackage[index]?.provinceCity}
@@ -149,6 +134,7 @@ export default function MobHero() {
           </motion.div>
         </AnimatePresence>
       </div>
+
       <div
         ref={containerRef}
         className="absolute bottom-10 flex h-100 w-full overflow-hidden max-[765px]:h-80"

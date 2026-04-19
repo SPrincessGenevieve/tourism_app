@@ -31,7 +31,7 @@ export default function ForgotPage() {
         desc={"Enter your email to reset your password"}
       ></AuthHeader>
       <div className="flex flex-col gap-4">
-        <Input label="Email Address" type="email"></Input>
+        <Input className="w-full" label="Email Address" type="email"></Input>
         <Button onClick={handleReset} className="relative">
           {loading === "reset" && (
             <div className="absolute flex h-full w-full items-center justify-center bg-white/70">

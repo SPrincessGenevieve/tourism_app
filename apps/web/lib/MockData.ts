@@ -1,3 +1,5 @@
+import { PackageT } from "./types"
+
 export const HeroPackage = [
   {
     name: "El Nido Tropical Escape",
@@ -34,7 +36,7 @@ export const HeroPackage = [
   },
 ]
 
-export const Packages = [
+export const Packages: PackageT[] = [
   {
     id: 2,
     name: "Waterfalls & Nature Escape: Lanao del Norte",
@@ -775,5 +777,316 @@ export const Packages = [
     inclusion: ["Van transfers", "Tour guide", "Entrance fees"],
     exclusion: ["Meals", "Airfare"],
     reviews: [],
+  },
+]
+
+export const LimitedDeal = [
+  {
+    id: 101,
+    name: "Siargao Island Adventure Escape",
+    packageOverview:
+      "Ride the waves and explore hidden lagoons in the surfing capital of the Philippines.",
+    location: "General Luna, Siargao, Philippines",
+    provinceCity: "Surigao del Norte",
+    maxCapacity: 8,
+    price: 12000,
+    duration: "3D2N",
+    image:
+      "https://nomadfrance.com/wp-content/uploads/2019/05/sugba-lagoon-nomad-france.jpg",
+    highlights: [
+      "https://www.bemytravelmuse.com/wp-content/uploads/2018/03/siargao-3.jpg",
+      "https://www.travel-palawan.com/wp-content/uploads/2024/01/Philippines-Guyam-Island-Siargao-Island-hopping-jpeg.jpeg",
+      "https://cooltravelvibes.com/wp-content/uploads/2023/12/Sugba-Lagoon-2048x1004.jpg",
+    ],
+    itinerary: [
+      {
+        day: 1,
+        activities: [
+          "Arrival in Siargao",
+          "Hotel check-in in General Luna",
+          "Visit Cloud 9 Boardwalk & sunset viewing",
+          "Dinner by the beach",
+        ],
+      },
+      {
+        day: 2,
+        activities: [
+          "Island hopping (Naked, Daku, Guyam Islands)",
+          "Lunch by the beach",
+          "Visit Sugba Lagoon (kayaking/swimming)",
+          "Free time or nightlife in General Luna",
+        ],
+      },
+      {
+        day: 3,
+        activities: [
+          "Morning surfing session or leisure time",
+          "Souvenir shopping",
+          "Check-out and departure",
+        ],
+      },
+    ],
+    inclusion: [
+      "2 nights accommodation",
+      "Daily breakfast",
+      "Island hopping tour",
+      "Boat transfers",
+      "Tour guide",
+    ],
+    exclusion: [
+      "Flights",
+      "Lunch and dinner",
+      "Surfboard rental",
+      "Personal expenses",
+    ],
+    limitedDeal: {
+      isActive: true,
+      discountType: "percentage",
+      discountValue: 25,
+      expiresAt: "2026-05-05T23:59:59",
+      remainingSlots: 3,
+      badge: "Flash Sale",
+    },
+  },
+  {
+    id: 102,
+    name: "Baguio Cool Escape",
+    packageOverview:
+      "Relax in the cool mountain air with scenic views, gardens, and cozy cafes.",
+    location: "Baguio City, Philippines",
+    provinceCity: "Benguet",
+    maxCapacity: 12,
+    price: 6500,
+    duration: "3D2N",
+    image:
+      "https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_863/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/eqlv8p2e4jwpcb1dv04y/BaguioCityDayTourfromManila.jpg",
+    highlights: [
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/98/d7/ab/caption.jpg?w=1400&h=800&s=1",
+      "https://wanderera.com/wp-content/uploads/2022/11/mines-view-park.jpg",
+      "https://elretirobaguio.com/wp-content/uploads/2024/02/Baguio-Botanical-Garden.jpg",
+    ],
+    itinerary: [
+      {
+        day: 1,
+        activities: [
+          "Arrival in Baguio",
+          "Hotel check-in",
+          "Visit Burnham Park (boat ride optional)",
+          "Session Road night stroll",
+        ],
+      },
+      {
+        day: 2,
+        activities: [
+          "Visit Mines View Park",
+          "Explore Wright Park & The Mansion",
+          "Strawberry Farm visit in La Trinidad",
+          "Cafe hopping",
+        ],
+      },
+      {
+        day: 3,
+        activities: [
+          "Visit Botanical Garden",
+          "Pasalubong shopping",
+          "Check-out and departure",
+        ],
+      },
+    ],
+    inclusion: [
+      "2 nights accommodation",
+      "Daily breakfast",
+      "City tour",
+      "Van transfers",
+      "Tour coordinator",
+    ],
+    exclusion: [
+      "Lunch and dinner",
+      "Entrance fees (optional attractions)",
+      "Personal expenses",
+    ],
+    limitedDeal: {
+      isActive: true,
+      discountType: "fixed",
+      discountValue: 1000,
+      expiresAt: "2026-04-30T23:59:59",
+      remainingSlots: 5,
+      badge: "Limited Offer",
+    },
+  },
+  {
+    id: 103,
+    name: "Palawan Underground River Experience",
+    packageOverview:
+      "Explore one of the New 7 Wonders of Nature and pristine island beaches.",
+    location: "Puerto Princesa, Palawan, Philippines",
+    provinceCity: "Palawan",
+    maxCapacity: 10,
+    price: 9800,
+    duration: "3D2N",
+    image:
+      "https://i1.wp.com/attracttour.com/wp-content/uploads/2013/04/Underground-River-in-Puerto-Princesa.jpg",
+    highlights: [
+      "https://explorph.com/wp-content/uploads/2024/10/Firefly-Watching-Experience-in-Puerto-Princesa-Palawan-.webp",
+      "https://i.pinimg.com/originals/c7/3e/0e/c73e0eabaa31176eeabd86da64c57eb7.jpg",
+      "https://www.travel-palawan.com/wp-content/uploads/2024/09/honda-bay-island-hopping-Puerto-Princesa-Palawan.jpeg",
+    ],
+    itinerary: [
+      {
+        day: 1,
+        activities: [
+          "Arrival in Puerto Princesa",
+          "Hotel check-in",
+          "City tour (Cathedral, Baywalk)",
+          "Firefly watching tour",
+        ],
+      },
+      {
+        day: 2,
+        activities: [
+          "Underground River tour",
+          "Boat ride inside cave",
+          "Lunch by the beach",
+          "Return to city",
+        ],
+      },
+      {
+        day: 3,
+        activities: [
+          "Honda Bay island hopping",
+          "Swimming and snorkeling",
+          "Check-out and departure",
+        ],
+      },
+    ],
+    inclusion: [
+      "2 nights accommodation",
+      "Underground River tour",
+      "Island hopping tour",
+      "Boat transfers",
+      "Tour guide",
+    ],
+    exclusion: ["Flights", "Environmental fees", "Personal expenses"],
+    limitedDeal: {
+      isActive: true,
+      discountType: "percentage",
+      discountValue: 15,
+      expiresAt: "2026-05-10T23:59:59",
+      remainingSlots: 2,
+      badge: "Last Chance",
+    },
+  },
+  {
+    id: 104,
+    name: "Sagada Adventure & Sea of Clouds",
+    packageOverview:
+      "Experience hanging coffins, caves, and breathtaking sunrise views.",
+    location: "Sagada, Mountain Province, Philippines",
+    provinceCity: "Mountain Province",
+    maxCapacity: 6,
+    price: 7200,
+    duration: "3D2N",
+    image:
+      "https://i.pinimg.com/originals/c2/08/69/c208694c13abe30089346133d6906bf4.jpg",
+    highlights: [
+      "https://2.bp.blogspot.com/-T4_3y2ntzyA/WFqQT8uqt3I/AAAAAAAAV0s/lmxUoCsBFHc6TejYxGedmVb_IDZwgqBBQCLcB/s1600/1.JPG",
+      "https://i.ytimg.com/vi/1oLhgfegEOE/maxresdefault.jpg",
+      "https://pinaywise.com/wp-content/uploads/2024/01/Sumaguing-Cave-Sagada.jpg",
+    ],
+    itinerary: [
+      {
+        day: 1,
+        activities: [
+          "Arrival in Sagada",
+          "Hotel check-in",
+          "Visit Echo Valley & Hanging Coffins",
+          "Bonfire night",
+        ],
+      },
+      {
+        day: 2,
+        activities: [
+          "Sunrise at Kiltepan Peak",
+          "Sumaguing Cave spelunking",
+          "Visit Bomod-ok Falls",
+        ],
+      },
+      {
+        day: 3,
+        activities: ["Coffee shop visit", "Souvenir shopping", "Departure"],
+      },
+    ],
+    inclusion: [
+      "2 nights accommodation",
+      "Cave guide",
+      "Local tours",
+      "Van transfers",
+    ],
+    exclusion: ["Meals", "Entrance fees", "Personal expenses"],
+    limitedDeal: {
+      isActive: true,
+      discountType: "percentage",
+      discountValue: 20,
+      expiresAt: "2026-05-03T23:59:59",
+      remainingSlots: 2,
+      badge: "Hot Deal",
+    },
+  },
+  {
+    id: 105,
+    name: "Cebu Whale Shark & Kawasan Falls",
+    packageOverview:
+      "Swim with whale sharks and chase waterfalls in a tropical paradise.",
+    location: "Oslob & Badian, Cebu, Philippines",
+    provinceCity: "Cebu",
+    maxCapacity: 10,
+    price: 8900,
+    duration: "3D2N",
+    image: "https://joyfulcebu.com/wp-content/uploads/2023/01/54893006_l.jpg",
+    highlights: [
+      "https://www.agoda.com/wp-content/uploads/2024/04/Featured-image-Whale-sharks-in-the-sea-Oslob-Cebu-Philippines.jpg",
+      "https://adventurebackpack.com/images/how-to-book-kawasan-falls-canyoneering-adventure-cebu.webp",
+      "https://tripjive.com/wp-content/uploads/2024/11/Whale-Shark-Interaction.jpg",
+    ],
+    itinerary: [
+      {
+        day: 1,
+        activities: [
+          "Arrival in Cebu",
+          "Travel to Oslob",
+          "Hotel check-in",
+          "Free time",
+        ],
+      },
+      {
+        day: 2,
+        activities: [
+          "Whale shark interaction",
+          "Travel to Badian",
+          "Kawasan Falls canyoneering",
+          "Dinner and rest",
+        ],
+      },
+      {
+        day: 3,
+        activities: ["Leisure time", "Return to Cebu City", "Departure"],
+      },
+    ],
+    inclusion: [
+      "2 nights accommodation",
+      "Whale shark tour",
+      "Canyoneering activity",
+      "Tour guide",
+      "Transfers",
+    ],
+    exclusion: ["Flights", "Meals", "GoPro rental", "Personal expenses"],
+    limitedDeal: {
+      isActive: true,
+      discountType: "fixed",
+      discountValue: 1500,
+      expiresAt: "2026-05-07T23:59:59",
+      remainingSlots: 4,
+      badge: "Flash Sale",
+    },
   },
 ]

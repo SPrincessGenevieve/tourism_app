@@ -43,9 +43,14 @@ export default function LoginPage() {
         <Input
           type="email"
           label="Email Address"
+          className="w-full"
           placeholder="juan@example.com"
         ></Input>
-        <Input label="Password" placeholder="* * * * * * * *"></Input>
+        <Input
+          className="w-full"
+          label="Password"
+          placeholder="* * * * * * * *"
+        ></Input>
         <div className="flex justify-end">
           <Button
             onClick={handleForgotPassword}

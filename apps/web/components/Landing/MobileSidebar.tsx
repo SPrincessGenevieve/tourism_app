@@ -16,10 +16,7 @@ export default function MobileSidebar() {
 
   return (
     <div className="">
-      <IconMenu
-        onClick={handleOpen}
-        className="z-40 text-white hover:bg-red-400"
-      ></IconMenu>
+      <IconMenu onClick={handleOpen} className="z-100 text-white"></IconMenu>
     </div>
   )
 }

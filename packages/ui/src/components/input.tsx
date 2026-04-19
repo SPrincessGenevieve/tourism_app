@@ -2,6 +2,7 @@
 
 import { Eye, EyeClosed } from "lucide-react"
 import React, { useState } from "react"
+import { cn } from "../lib/utils"
 
 type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   label?: string
@@ -34,7 +35,10 @@ export default function Input({
       <div className="relative">
         <input
           type={isPassword ? (showPassword ? "text" : "password") : type}
-          className={`h-12 w-full rounded-lg border-2 border-transparent bg-primary-gray-100 p-2 px-4 pr-10 transition duration-300 ease-in-out outline-none placeholder:text-gray-400 focus:border-primary-purple-100 ${className}`}
+          className={cn(
+            "h-12 w-full rounded-lg border-2 border-transparent bg-primary-gray-100 p-2 px-4 pr-10 transition duration-300 ease-in-out outline-none placeholder:text-gray-400 focus:border-primary-purple-100",
+            className
+          )}
           {...props}
         />
 

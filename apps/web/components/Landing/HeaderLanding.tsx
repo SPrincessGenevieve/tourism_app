@@ -15,7 +15,7 @@ export default function HeaderLanding() {
       className="absolute flex h-12 w-full justify-between p-4"
     >
       <Logo dark={false}></Logo>
-      <div className="flex items-center">
+      <div className="z-40 flex items-center">
         {pages.map((item, i) => (
           <Button
             key={i}

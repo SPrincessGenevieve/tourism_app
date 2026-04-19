@@ -33,10 +33,11 @@ export default function Page() {
     })
   }, [width])
 
+  console.log("WIDTH: ", width)
+
   return (
     <div className="relative flex min-h-screen w-full flex-col gap-20 overflow-y-auto">
       <HeroSection></HeroSection>
-      <SidebarContent></SidebarContent>
       <SearchSection></SearchSection>
       <PackageSection></PackageSection>
       <DestinationSection></DestinationSection>

@@ -44,28 +44,37 @@ export default function page() {
         desc="Start your journey with us today"
       ></AuthHeader>
       <div className="flex flex-col gap-4">
-        <Input label="Full Name" placeholder="Juan Dela Cruz"></Input>
         <Input
+          className="w-full"
+          label="Full Name"
+          placeholder="Juan Dela Cruz"
+        ></Input>
+        <Input
+          className="w-full"
           containerClassName="w-full"
           label="Email Address"
           placeholder="example@gmail.com"
         ></Input>
         <Input
+          className="w-full"
           containerClassName="w-full"
           label="Phone Number (Optional)"
           placeholder="+63 123 456 7890"
         ></Input>
         <Input
+          className="w-full"
           label="Nationality (Optional)"
           placeholder="e.g. Filipino"
         ></Input>
         <Input
+          className="w-full"
           containerClassName="w-full"
           label="Password"
           type="password"
           placeholder="Create a strong password"
         ></Input>
         <Input
+          className="w-full"
           containerClassName="w-full"
           label="Confirm Password"
           placeholder="Re-enter the password"

@@ -26,7 +26,7 @@ export default function () {
               containerClassName="w-full"
             ></Input>
           </div>
-          <Input label="Email" className="bg-white"></Input>
+          <Input label="Email" className="bg-white w-full"></Input>
           <div className="flex gap-4 max-[670px]:flex-col">
             <Input
               className="w-full bg-white"

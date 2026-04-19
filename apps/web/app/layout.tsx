@@ -4,6 +4,7 @@ import "@workspace/ui/styles/globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@workspace/ui/lib/utils"
 import { UserProvider } from "./context/UseContext"
+import SidebarContent from "@/components/Landing/SidebarContent"
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" })
 
@@ -30,7 +31,10 @@ export default function RootLayout({
     >
       <body>
         <ThemeProvider>
-          <UserProvider>{children}</UserProvider>
+          <UserProvider>
+            <SidebarContent></SidebarContent>
+            {children}
+          </UserProvider>
         </ThemeProvider>
       </body>
     </html>

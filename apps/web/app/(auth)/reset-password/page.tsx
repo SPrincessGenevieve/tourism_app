@@ -29,8 +29,12 @@ export default function ResetPassPage() {
         desc={"Enter your new password"}
       ></AuthHeader>
       <div className="flex flex-col gap-4">
-        <Input label="New Password" type="password"></Input>
-        <Input label="Confirm Password Password" type="password"></Input>
+        <Input className="w-full" label="New Password" type="password"></Input>
+        <Input
+          className="w-full"
+          label="Confirm Password Password"
+          type="password"
+        ></Input>
         <Button className="relative" onClick={handleReset}>
           {loading === "reset" && (
             <div className="absolute flex h-full w-full items-center justify-center bg-white/70">
