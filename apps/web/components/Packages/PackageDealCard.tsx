@@ -6,7 +6,6 @@ import Image from "next/image"
 import {
   IconClock,
   IconMapPin,
-  IconStarFilled,
   IconUser,
 } from "@tabler/icons-react"
 import { Button } from "@workspace/ui/components/button"
@@ -22,12 +21,10 @@ type PackageCardT = {
 export default function PackageDealCard({
   data,
   width,
-  key,
   cardWidth = "w-100",
 }: PackageCardT) {
   return (
     <div
-      key={key}
       className={`relative flex flex-col overflow-hidden pb-12 ${width > 455 ? cardWidth : "w-full"} min-h-50 rounded-xl border bg-white shadow-xl shadow-primary-blue-400/30`}
     >
       <div className="relative flex h-60 w-full items-start justify-between overflow-hidden p-2">

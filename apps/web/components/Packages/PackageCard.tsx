@@ -14,7 +14,6 @@ import { PackageT } from "@/lib/types"
 
 type PackageCardT = {
   data: PackageT
-  key: number
   width: number
   cardWidth?: number | string
 }
@@ -22,12 +21,10 @@ type PackageCardT = {
 export default function PackageCard({
   data,
   width,
-  key,
   cardWidth = "w-100",
 }: PackageCardT) {
   return (
     <div
-      key={key}
       className={`relative flex flex-col overflow-hidden pb-12 ${width > 455 ? cardWidth : "w-full"} min-h-50 rounded-xl border bg-white shadow-xl shadow-primary-blue-400/30`}
     >
       <div className="relative flex h-60 w-full items-start justify-between overflow-hidden p-2">
@@ -68,7 +65,7 @@ export default function PackageCard({
             <p className="font-bold">{data.name}</p>
             <div>
               <div className="flex items-center gap-2">
-                <IconMapPin size={16}></IconMapPin>
+                <IconMapPin size={16} className=""></IconMapPin>
                 <p className="text-sm">{data.location}</p>
               </div>
               <div className="flex items-center gap-2">
