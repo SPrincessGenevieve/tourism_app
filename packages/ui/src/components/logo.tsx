@@ -8,7 +8,7 @@ type LogoT = {
 export default function Logo({ dark = true }: LogoT) {
   return (
     <div
-      className={`z-5 flex items-center gap-2 ${dark ? "text-black" : "text-white"}`}
+      className={`z-40 flex items-center gap-2 ${dark ? "text-black" : "text-white"}`}
     >
       <Footprints></Footprints>{" "}
       <p

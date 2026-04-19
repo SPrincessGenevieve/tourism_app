@@ -11,17 +11,20 @@ import { LimitedDeal, Packages } from "@/lib/MockData"
 import { IconBolt, IconBook, IconPackage } from "@tabler/icons-react"
 import PackageDealCard from "@/components/Packages/PackageDealCard"
 import { Skeleton } from "@workspace/ui/components/skeleton"
+import { useRouter } from "next/navigation"
 
 type PackageWT = {
   width: number
 }
 
 export default function PackageWeb({ width }: PackageWT) {
+  const router = useRouter()
   const [range, setRange] = useState([2000, 50000])
   const [activeTab, setActiveTab] = useState("all")
   const [visibleCount, setVisibleCount] = useState(6)
   const [visibleCountDeal, setVisibleCountDeal] = useState(6)
   const [loadData, setLoadData] = useState(false)
+  const [loadingIndex, setLoadingIndex] = useState<number | null>(null)
 
   const [selectedDurations, setSelectedDurations] = useState<string[]>([])
   const [selectedLocations, setSelectedLocations] = useState<string[]>([])
@@ -146,6 +149,11 @@ export default function PackageWeb({ width }: PackageWT) {
     activeTab === "all"
       ? filteredPackages.length === 0
       : filteredDeals.length === 0
+
+  const handleViewDetails = (name: string, index: number, tab: string) => {
+    setLoadingIndex(index)
+    router.push(`/packages/${tab === "tour" ? "tour" : "deals"}/${name}`)
+  }
 
   return (
     <div className="flex items-start gap-8">
@@ -281,16 +289,20 @@ export default function PackageWeb({ width }: PackageWT) {
                   .slice(0, visibleCount)
                   .map((item, i) => (
                     <PackageCard
+                      onClick={() => handleViewDetails(item.name, i, "tour")}
                       cardWidth={"w-93"}
                       data={item}
                       key={i}
                       width={width}
+                      loading={i === loadingIndex ? true : false}
                     ></PackageCard>
                   ))
               : filteredDeals
                   .slice(0, visibleCount)
                   .map((item, i) => (
                     <PackageDealCard
+                      onClick={() => handleViewDetails(item.name, i, "deal")}
+                      loading={i === loadingIndex ? true : false}
                       cardWidth={"w-93"}
                       data={item}
                       key={i}

@@ -3,25 +3,26 @@
 import React from "react"
 import { motion } from "motion/react"
 import Image from "next/image"
-import {
-  IconClock,
-  IconMapPin,
-  IconUser,
-} from "@tabler/icons-react"
+import { IconClock, IconMapPin, IconUser } from "@tabler/icons-react"
 import { Button } from "@workspace/ui/components/button"
 import { PackageDealT } from "@/lib/types"
+import { Spinner } from "@workspace/ui/components/spinner"
 
 type PackageCardT = {
   data: PackageDealT
   key: number
   width: number
   cardWidth?: number | string
+  onClick?: () => void
+  loading?: boolean
 }
 
 export default function PackageDealCard({
   data,
   width,
   cardWidth = "w-100",
+  onClick,
+  loading = false,
 }: PackageCardT) {
   return (
     <div
@@ -100,7 +101,10 @@ export default function PackageDealCard({
             </div>
           </div>
           <div className="h-full">
-            <Button className="h-10">View Details</Button>
+            <Button onClick={onClick} className="h-10">
+              {loading && <Spinner className="text-white"></Spinner>} View
+              Details
+            </Button>
           </div>
         </div>
       </div>
