@@ -6,6 +6,7 @@ import { LimitedDeal, Packages } from "@/lib/MockData"
 import HeaderPackages from "@/components/Packages/HeaderPackages"
 import PackageDetailHeader from "@/components/Landing/Package/PackageDetailHeader"
 import { PackageT, PackageDealT } from "@/lib/types"
+import IterinarySection from "@/components/Packages/IterinarySection"
 
 export default function PackageTourDetails() {
   const pathName = usePathname()
@@ -18,11 +19,11 @@ export default function PackageTourDetails() {
       : LimitedDeal.find((item) => item.name === name)
   ) as PackageT | PackageDealT | undefined
 
-  console.log("DATA: ", data)
 
   return (
     <div className="min-h-screen w-full">
       <PackageDetailHeader item={data}></PackageDetailHeader>
+      <IterinarySection item={data}></IterinarySection>
     </div>
   )
 }

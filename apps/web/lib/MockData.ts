@@ -57,6 +57,12 @@ export const Packages: PackageT[] = [
     itinerary: [
       {
         day: 1,
+        images: [
+          "https://scontent.fceb10-1.fna.fbcdn.net/v/t39.30808-6/474073286_910475657922874_1302413307753102739_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeF6PIa86QzVWXBTC30VP19z8YkEUK4SsKjxiQRQrhKwqH4mRU4roMaDFgF0JbyiN-wnZzK9GFRyq7Bo2m7wdNCh&_nc_ohc=gqUFDRB6yYoQ7kNvwGxW81M&_nc_oc=AdqLE9LwA1-GyAbPLyzUuynh9AEbHWB8SeyQctckmH84Tc4KyWl9Mgbk9map_mHAync&_nc_zt=23&_nc_ht=scontent.fceb10-1.fna&_nc_gid=tgmdSTOT8XG-btIuZf_-TA&_nc_ss=7a3a8&oh=00_Af1tx0zr8CwInK1jN_oCvknEdwDZsjhXBZ9OD9HqIqOA6Q&oe=69EB8838",
+          "https://images.hdqwalls.com/wallpapers/golden-sunset-over-calm-ocean-and-island-nl.jpg",
+        ],
+        description:
+          "Welcome to the vibrant City of Iligan! Your journey begins with an <strong>Arrival at Iligan City</strong> and a smooth <strong>Hotel check-in</strong> to get settled. Once you've refreshed, dive into the local culture with a <strong>City tour</strong> featuring the iconic <i>Anahaw Amphitheater</i>, known for its unique open-air architecture, and the bustling <i>City Plaza</i>, the heart of local life.<br><br>As the day winds down, head to the coast for a breathtaking <strong>Sunset viewing at Bayug Island</strong>. Watch the sky transform into a palette of warm oranges and purples over the historic site of the first settlement in Iligan, offering a <b>tranquil end</b> to your first day.",
         activities: [
           "Arrival at Iligan City",
           "Hotel check-in",
@@ -66,6 +72,12 @@ export const Packages: PackageT[] = [
       },
       {
         day: 2,
+        images: [
+          "https://2.bp.blogspot.com/-ZSdy_ubW5_E/UP_HoDmGA9I/AAAAAAAADig/sbaEjbTCuiw/s1600/DSC_0415.JPG",
+          "https://image.vigattin.com/box/optimize/88/222_4472171941533971126.jpg",
+        ],
+        description:
+          "Prepare for an unforgettable day of nature! First, <strong>Visit Maria Cristina Falls</strong>, the legendary 'Twin Falls' that powers half of Mindanao. Next, <strong>Explore Tinago Falls</strong>, where you will trek down 500 steps to find a hidden paradise. Enjoy <i>swimming & bamboo rafting</i> in its cold, turquoise basin. <br><br>After a <strong>Lunch near the falls</strong>, continue your adventure with a <strong>Visit to Mimbalot Falls</strong>, where you can relax by the rocky cascades of the <i>Tourism Triangle</i>. Wrap up your day with a satisfying <strong>Dinner and free time</strong> to explore the local night market and sample some world-famous Iligan Lechon.",
         activities: [
           "Visit Maria Cristina Falls",
           "Explore Tinago Falls (swimming & bamboo raft)",
@@ -76,6 +88,11 @@ export const Packages: PackageT[] = [
       },
       {
         day: 3,
+        images: [
+          "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhhC6EuRi4m5BJJPtskHHoVS3m-bfm0zerFGdIqXyD132Hb858KbDbd_gzDFQZMiCosHgy7hKbg-mSsLUAyjbI3fpygKhlUWx5kJzclTeEoZDwtmC5cX3BNe-CbyyX4ul7bzF5DmZmX7SHlPe0-TWLENl-vGrup6h6Ssj8-izcZvBRotJ6lpJ7Ao_Z7rg/s1600/1.jpg",
+        ],
+        description:
+          "Spend your final morning with a <strong>Morning visit to Dodiongan Falls</strong>. This 'wing-like' waterfall is a favorite for those seeking a more rugged, <i>off-the-beaten-path</i> experience. The serene atmosphere is perfect for a final moment of reflection.<br><br>Before you leave, head out for some <strong>Pasalubong shopping</strong>. Don't forget to grab a few packs of <i>Cheding’s Toasted Peanuts</i> and Sukang Pinakurat for your loved ones back home. Finally, proceed with <strong>Check-out and departure</strong>, taking with you the <b>majestic spirit</b> of Iligan’s waters.",
         activities: [
           "Morning visit to Dodiongan Falls",
           "Pasalubong shopping",
@@ -153,6 +170,12 @@ export const Packages: PackageT[] = [
     itinerary: [
       {
         day: 1,
+        images: [
+          "https://i2.wp.com/www.projectlupad.com/wp-content/uploads/2018/07/Paras-Beach-Resort-Camiguin-Aerial-View-Copyright-to-Project-LUPAD-23.jpg?fit=3360%2C1872&ssl=1",
+          "https://www.journeyinsider.com/wp-content/uploads/2016/03/sunset-at-white-island-camiguin-900x506.jpg",
+        ],
+        description:
+          "Welcome to the 'Island Born of Fire!' Your journey begins with your <strong>Arrival in Camiguin</strong>, where the lush volcanic landscape meets the sea. Enjoy a seamless <strong>Check-in at Paras Beach Resort</strong>, strategically located near the northern coast for easy access to the island's top attractions.<br><br>As the afternoon cools down, take a short boat ride to experience a breathtaking <strong>Sunset at White Island</strong>. This iconic, horseshoe-shaped sandbar offers an <i>unobstructed view</i> of Mt. Hibok-Hibok and Mt. Vulcan. Watching the sky turn gold while standing on pure white sand is the <b>ultimate island welcome</b>.",
         activities: [
           "Arrival in Camiguin",
           "Check-in at Paras Beach Resort",
@@ -161,6 +184,12 @@ export const Packages: PackageT[] = [
       },
       {
         day: 2,
+        images: [
+          "https://thefroggyadventures.com/wp-content/uploads/2024/10/katibawasan-falls-camiguin-aerial-2-1536x1024.jpg",
+          "https://philippinetravels.ph/wp-content/uploads/2022/08/21-Camiguin-Tourist-Spots-Sunken-Cemetery-1024x768.jpg",
+        ],
+        description:
+          "Start your morning with a visit to the towering <strong>Katibawasan Falls</strong>. Plummeting 70 meters into a rock pool, it is surrounded by giant ferns and orchids, offering a <i>refreshingly cool</i> start to your day.<br><br>Next, head to the iconic <strong>Sunken Cemetery tour</strong>. Marked by a massive cross rising from the ocean, this site commemorates a community submerged by a volcanic eruption in the 1870s. It’s a hauntingly beautiful spot for history and snorkeling.<br><br>End your day at <strong>Ardent Hot Spring</strong>. These natural pools are heated by the volcanic heart of the island, providing a <b>therapeutic soak</b> that is perfect for relaxing your muscles after a day of exploration.",
         activities: [
           "Visit Katibawasan Falls",
           "Sunken Cemetery tour",
@@ -169,6 +198,11 @@ export const Packages: PackageT[] = [
       },
       {
         day: 3,
+        images: [
+          "https://thefroggyadventures.com/wp-content/uploads/2024/10/mantigue-island-camiguin-aerial-2048x1536.jpg",
+        ],
+        description:
+          "Before you leave, embark on a <strong>Mantigue Island trip</strong>. Unlike the sandbar, Mantigue is a lush, four-hectare island with a mini-forest and a <i>protected marine sanctuary</i>. It is arguably the best spot on the island for snorkeling with sea turtles and vibrant coral gardens.<br><br>After soaking in the last bits of paradise, head back to the mainland for your <strong>Departure</strong>. Whether you are catching a ferry at Benoni or a flight at the airport, you'll leave with a <b>renewed spirit</b> from the magic of Camiguin.",
         activities: ["Mantigue Island trip", "Departure"],
       },
     ],
@@ -218,6 +252,11 @@ export const Packages: PackageT[] = [
     itinerary: [
       {
         day: 1,
+        images: [
+          "https://pix10.agoda.net/hotelImages/301773/-1/7c172a8869f89606862ab8390a153096.png",
+        ],
+        description:
+          "Welcome to the highland paradise of Mindanao! Upon your <strong>Arrival in Bukidnon</strong>, you will feel the immediate drop in temperature and the refreshing scent of pine trees. Experience a cozy <strong>Check-in at Dahilayan Forest Park Resort</strong>, a premier mountain getaway nestled right at the edge of the forest.<br><br>Spend your afternoon in <strong>Leisure time</strong>, exploring the resort’s beautiful gardens or simply relaxing on your balcony with a view of the mountains. It is the perfect opportunity to <i>unplug and breathe in</i> the crisp highland air before your adventures begin tomorrow.",
         activities: [
           "Arrival in Bukidnon",
           "Check-in at Dahilayan Forest Park Resort",
@@ -226,6 +265,12 @@ export const Packages: PackageT[] = [
       },
       {
         day: 2,
+        images: [
+          "https://pinaywise.com/wp-content/uploads/2024/04/Del-Monte-Pineapple-Plantation-Bukidnon-Mindanao.jpg",
+          "https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_777,f_auto/w_80,x_15,y_15,g_south_west,l_klook_water/activities/jayqenwkhttoptkrdayc/DahilayanAdventureParkTicketinCagayandeOro.jpg",
+        ],
+        description:
+          "Get your adrenaline pumping with a <strong>Zipline at Dahilayan Adventure Park</strong>, home to one of the longest dual superfly ziplines in Asia. Feel the rush as you soar over the lush canopy with a <i>bird’s-eye view</i> of the valley below.<br><br>After the excitement, take a relaxing <strong>Visit to the Del Monte Pineapple Plantation</strong>. Marvel at the vast, 'sea of pineapples' stretching toward the horizon at the foot of Mt. Kitanglad. Along the way, enjoy the <strong>Scenic mountain views</strong> that make Bukidnon the <b>Switzerland of Mindanao</b>, perfect for capturing postcard-worthy photos of the rolling hills and plateau.",
         activities: [
           "Zipline at Dahilayan Adventure Park",
           "Visit Del Monte Pineapple Plantation",
@@ -234,6 +279,9 @@ export const Packages: PackageT[] = [
       },
       {
         day: 3,
+        images: [],
+        description:
+          "Enjoy a final <strong>Morning relaxation</strong> session. Savor a cup of locally grown Bukidnon coffee while watching the fog lift from the pine trees. This quiet time allows you to soak in the <i>tranquility of the mountains</i> one last time.<br><br>After a slow breakfast, proceed with your <strong>Departure</strong>. As you descend from the highlands, you'll bring home the <b>refreshing energy</b> of the forest and memories of your adventure in the pineapple capital of the Philippines.",
         activities: ["Morning relaxation", "Departure"],
       },
     ],
@@ -277,6 +325,11 @@ export const Packages: PackageT[] = [
     itinerary: [
       {
         day: 1,
+        images: [
+          "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/505684085.jpg?k=7bcc4e3072f13305171e03d61308d6418a1ffe22181684d56089d67a0996ef41&o=",
+        ],
+        description:
+          "Welcome to the beautiful island of Siargao! Upon your <strong>Arrival in Siargao</strong> at Sayak Airport, you will be whisked away to the General Luna area.<br><br>Experience a seamless <strong>Check-in at Siargao Bleu Resort</strong>, one of the island's premier stays. Take a moment to appreciate the tropical architecture and the massive pool before heading out.<br><br>Finish your first day with a walk along the iconic boardwalk for a <strong>Cloud 9 sunset</strong>. Watch the pro surfers tackle the waves as the sky turns a <i>vibrant pink and orange</i>. It's the perfect introduction to the island's laid-back 'island vibe.'",
         activities: [
           "Arrival in Siargao",
           "Check-in at Siargao Bleu Resort",
@@ -285,6 +338,13 @@ export const Packages: PackageT[] = [
       },
       {
         day: 2,
+        images: [
+          "https://as2.ftcdn.net/jpg/02/85/74/97/1000_F_285749799_tjZv5j3kUchi97VcIgTC7Sbx4O7r6lbp.jpg",
+          "https://www.vacationhive.com/images/spots/siargao-daku-island-banner.png",
+          "https://projectgora.com/wp-content/uploads/2020/11/guyam-island-aerial-shot-scaled.jpg",
+        ],
+        description:
+          "Prepare for a full day of sun and sea with an <strong>Island hopping</strong> adventure to the famous trio: <b>Naked, Daku, and Guyam Islands</b>.<br><br>Start at <i>Naked Island</i>, a pristine white sandbar surrounded by nothing but crystal-clear water. Next, head to <i>Daku Island</i>, where you can enjoy a traditional boodle fight lunch under coconut trees. Finally, explore the tiny, picturesque <i>Guyam Island</i>.<br><br>There will be plenty of time for <strong>Swimming and snorkeling</strong> in the turquoise lagoons, so don't forget your underwater camera to capture the <b>thriving marine life</b>.",
         activities: [
           "Island hopping (Naked, Daku, Guyam)",
           "Swimming and snorkeling",
@@ -292,6 +352,11 @@ export const Packages: PackageT[] = [
       },
       {
         day: 3,
+        images: [
+          "https://www.jonnymelon.com/wp-content/uploads/2018/10/sugba-lagoon-22.jpg",
+        ],
+        description:
+          "Start your final morning with a boat ride through the mangroves to reach the stunning <strong>Sugba Lagoon visit</strong>. This hidden gem is famous for its <i>bright blue waters</i> and the iconic wooden diving board. You can try paddleboarding, kayaking, or simply jumping into the refreshing lagoon.<br><br>After your lagoon adventure, it's time for <strong>Departure</strong>. Head back to the resort to pack your bags and catch your shuttle to the airport. You'll leave the island with a <b>sun-kissed glow</b> and a promise to return to the magic of Siargao.",
         activities: ["Sugba Lagoon visit", "Departure"],
       },
     ],
@@ -329,6 +394,11 @@ export const Packages: PackageT[] = [
     itinerary: [
       {
         day: 1,
+        images: [
+          "https://img.truvvle.com/?src=aHR0cHM6Ly9pbWcudHJhdmVsZmVlZC5pby9rbmVlbHlyYWMlMkYyMDIwMDcyNlQxNTIyMTMxODdaLTE5OThDQU1fMjAyMF8wN18yNl8xN181MV8zNl9GTi5qcGc&width=3840",
+        ],
+        description:
+          "Welcome to Iligan! Upon your <strong>Arrival and check-in</strong>, take a moment to settle into your accommodation and feel the urban energy of this industrial hub mixed with natural beauty.<br><br>Spend your afternoon on a <strong>DIY city exploration</strong>. You can visit the <i>St. Michael’s Cathedral</i>, the heart of the city's spiritual life, or take a stroll through the bustling streets to see the local landmarks.<br><br>No first day is complete without a <strong>Local food trip</strong>. Make sure to try the famous <b>Iligan Lechon</b>—known for its distinctively spicy and flavorful skin—or head to a local 'halang-halang' joint for a spicy beef soup that is a local favorite.",
         activities: [
           "Arrival and check-in",
           "DIY city exploration",
@@ -337,10 +407,21 @@ export const Packages: PackageT[] = [
       },
       {
         day: 2,
+        images: [
+          "https://www.awanderfulsole.com/wp-content/uploads/2015/01/dsc04644.jpg",
+          "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/92/77/b0/mimbalot-falls.jpg?w=1200&h=-1&s=1",
+        ],
+        description:
+          "Prepare to be amazed as you <strong>Visit Tinago Falls</strong>. To reach this 'hidden' gem, you’ll descend approximately 400 winding steps, but the view at the bottom is worth every bit of effort. The <i>deep blue-green basin</i> and the towering falls create a mystical atmosphere perfect for swimming and bamboo rafting.<br><br>Next, you will <strong>Visit Mimbalot Falls</strong>. Part of the 'Tourism Triangle,' this waterfall is more accessible and features a series of cascades. It’s a great spot for a picnic or just relaxing by the rocks while listening to the rushing water.<br><br>Enjoy some <strong>Free time</strong> in the evening to relax at your hotel or visit a local night market to experience the city's vibrant <b>after-dark culture</b>.",
         activities: ["Visit Tinago Falls", "Visit Mimbalot Falls", "Free time"],
       },
       {
         day: 3,
+        images: [
+          "https://visit.goiligan.com/wp-content/uploads/2025/09/photo_2025-09-15-13.57.25-1024x768.jpeg?lossy=1&ssl=1",
+        ],
+        description:
+          "Before you head out, spend your morning <strong>Souvenir shopping</strong>. Look for the world-famous <i>Cheding’s Toasted Peanuts</i>—a must-buy pasalubong from Iligan. You might also find local hand-woven crafts or 'Sukang Pinakurat' to bring a taste of the region back home.<br><br>As your trip comes to an end, proceed with your <strong>Departure</strong>. Whether you are heading to the pier or the nearby Laguindingan Airport, you'll leave with a <b>renewed appreciation</b> for the raw power and beauty of Lanao del Norte’s waters.",
         activities: ["Souvenir shopping", "Departure"],
       },
     ],
@@ -389,6 +470,12 @@ export const Packages: PackageT[] = [
     itinerary: [
       {
         day: 1,
+        images: [
+          "https://www.vacationhive.com/images/hives/34/34-camiguin-island-main-banner2.jpg",
+          "https://i1.wp.com/www.projectlupad.com/wp-content/uploads/2018/08/Spectacular-Golden-Hour-at-White-Island-Camiguin-Project-LUPAD.jpeg?fit=3358%2C1714&ssl=1",
+          "https://i2.wp.com/www.projectlupad.com/wp-content/uploads/2018/07/Paras-Beach-Resort-Camiguin-Aerial-View-Copyright-to-Project-LUPAD-23.jpg?fit=3360%2C1872&ssl=1",
+        ],
+        description: `Upon reaching the airport or Balbagon/Benoni Port, take a quick tricycle or van ride to your resort. Most accommodations are nestled in Mambajao, providing easy access to the northern coast. Use this time to settle in, freshen up, and perhaps try some local Pastel (a soft bun with yema filling) as a welcoming snack<br><br>Head to the jump-off point in Brgy. Agoho. Since this is a DIY trip, you’ll rent a small outrigger boat (good for 4-6 people). The "island" is actually a horseshoe-shaped sandbar made of pure white coral sand. There are no trees here, offering an unobstructed, panoramic view of the Camiguin mountains. It’s the perfect spot for swimming in turquoise waters and taking that postcard-worthy photo.<br><br>After returning from the sandbar, find a cozy spot along the shoreline of Agoho or Yumbing. As the sun dips below the horizon, the sky transforms into shades of violet and gold, reflecting off the volcanic black sand beaches that line the main island.`,
         activities: [
           "Arrival and check-in",
           "Visit White Island (DIY)",
@@ -397,14 +484,26 @@ export const Packages: PackageT[] = [
       },
       {
         day: 2,
+        images: [
+          "https://www.wonderingwanderer.com/wp-content/uploads/2018/09/Katibawasan-Falls-Cover.jpg",
+          "https://1.bp.blogspot.com/-peI8oWb5Gmc/X3iCUzTss8I/AAAAAAAAO-g/PIguUdD3tK4v_9krVHtbHXSQBm3-i4kewCLcBGAsYHQ/s16000/Sunken_cemetery_camiguin-002.jpg",
+          "https://islandhoppinginthephilippines.com/mindanao/wp-content/uploads/2025/05/ardent-spring-camiguin.jpg",
+        ],
+        description:
+          "Start your morning at the breathtaking <strong>Katibawasan Falls</strong>. Plummeting 70 meters into a rock pool, it is surrounded by lush ground orchids and ferns. The water is <i>refreshingly cold</i>, making it the perfect wake-up call for your second day.<br><br>Next, journey to the <strong>Sunken Cemetery</strong> in Catarman. Marked by a massive concrete cross rising from the sea, this site was submerged during the 1871 volcanic eruption. It is a hauntingly beautiful place to watch the waves or even snorkel over the ancient tombstones now covered in coral.<br><br>To wrap up the day, head to <strong>Ardent Hot Spring</strong>. These natural stone pools are nestled at the foot of Hibok-Hibok Volcano. The mineral-rich waters are naturally heated, providing a <b>therapeutic soak</b> to soothe your muscles after a day of exploration.",
         activities: [
           "Visit Katibawasan Falls",
           "Sunken Cemetery",
-          "Ardent Hot Spring",
+          "Ardent Spring",
         ],
       },
       {
         day: 3,
+        images: [
+          "https://twomonkeystravelgroup.com/wp-content/uploads/2020/05/Travel-Guide-to-Camiguin-Island-Philippines-DIY-6.jpg",
+        ],
+        description:
+          "Enjoy some <strong>Free Time</strong> to explore the local town of Mambajao at your own pace. This is the perfect opportunity to visit the local market and buy a box of <i>Vjandep Pastel</i> or some sweet <b>Lanzones</b> to take home as 'pasalubong.'<br><br>Take a final stroll along the coast or grab a coffee at a seaside cafe while soaking in the view of the volcanoes one last time. Finally, proceed with your <strong>Departure</strong> as you head to the airport or port for your journey home, carrying memories of the <b>Island Born of Fire</b>.",
         activities: ["Free time", "Departure"],
       },
     ],
@@ -457,6 +556,11 @@ export const Packages: PackageT[] = [
     itinerary: [
       {
         day: 1,
+        images: [
+          "https://www.any5354.com/wp-content/uploads/2019/08/e210ffeaf6030b074c92cc76cffe339d.jpg",
+        ],
+        description:
+          "Welcome to the highland paradise! Upon your <strong>Arrival and check-in</strong>, take a moment to breathe in the crisp, pine-scented air that Bukidnon is famous for. After settling into your accommodation, enjoy some <strong>Leisure time</strong> to explore the local surroundings or simply relax and adjust to the cooler altitude.<br><br>As evening falls, head out for a <strong>Night market visit</strong>. This is a fantastic way to immerse yourself in the local culture, where you can find <i>street food favorites</i> like grilled meats and fresh sweet corn. It is the perfect introduction to the warm hospitality of the locals.",
         activities: [
           "Arrival and check-in",
           "Leisure time",
@@ -465,6 +569,11 @@ export const Packages: PackageT[] = [
       },
       {
         day: 2,
+        images: [
+          "https://i.pinimg.com/736x/51/cf/36/51cf360bbf3f0dda5f17a437e3d6508d.jpg",
+        ],
+        description:
+          "Start your morning with a <strong>Visit to the Dahilayan area</strong>. Known for its world-class adventure parks and lush greenery, you can enjoy the stunning forest scenery even with just an <i>entrance-only</i> visit. Walking through the pine trees feels like being in a different country.<br><br>Spend your afternoon exploring the various <strong>Viewpoints and photo spots</strong> around the area. Don’t miss the chance to capture the <b>rolling hills and mountain ridges</b> that make Bukidnon a photographer's dream. Afterward, take some <strong>Free time</strong> to enjoy a quiet lunch at a nearby café or find a peaceful spot to appreciate the tranquil landscape.",
         activities: [
           "Visit Dahilayan area (entrance only)",
           "Viewpoints and photo spots",
@@ -473,6 +582,11 @@ export const Packages: PackageT[] = [
       },
       {
         day: 3,
+        images: [
+          "http://tarakahitsaan.com/images/spots/Aniningpan-Ridge-bukidnon.jpg",
+        ],
+        description:
+          "There is nothing quite like a <strong>Morning coffee with a mountain view</strong>. Take this time to sit back and watch the fog roll over the peaks while sipping on local Bukidnon coffee, known for its <i>rich, earthy flavor</i>. It’s a serene way to reflect on your highland getaway.<br><br>Finally, prepare for your <strong>Departure</strong>. As you head back down to the lowlands, you’ll carry with you the <b>refreshing energy</b> of the mountains and the peaceful memories of the island’s 'Pineapple Capital.'",
         activities: ["Morning coffee with mountain view", "Departure"],
       },
     ],
@@ -520,6 +634,11 @@ export const Packages: PackageT[] = [
     itinerary: [
       {
         day: 1,
+        images: [
+          "https://www.zafiro.tv/wp-content/uploads/2021/10/dusittani.jpg",
+        ],
+        description:
+          "Your luxury getaway begins with a seamless <strong>VIP airport pickup</strong>, where a private chauffeur will escort you directly to the heart of the city. Enjoy a hassle-free <strong>Check-in at DusitD2 Davao</strong>, a contemporary oasis known for its Thai-inspired hospitality and sophisticated design.<br><br>As the sun sets, indulge in <strong>City fine dining</strong> at one of Davao's premier culinary spots. Savor a <i>multi-course meal</i> featuring local flavors elevated with international techniques, providing the perfect start to your high-end experience.",
         activities: [
           "VIP airport pickup",
           "Check-in at DusitD2 Davao",
@@ -528,6 +647,12 @@ export const Packages: PackageT[] = [
       },
       {
         day: 2,
+        images: [
+          "https://www.edennaturepark.com.ph/wp-content/uploads/2017/03/about_optimized_1.jpg",
+          "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhaXiZtUYWTHIPhLBpmqCjdmpp4buNMqL0lke_0wVi_Cu1HIixUg2elRVJwRcN-W7uDrJI3Io2ci--eHY7PXt5z0aY4EHiBsa-Uu8OdZilBgzt3MLCXgXjqSTTYQ24D1lyk2s48rNQ-iFDE1ZxAcFzBY8q0Pk2sbrwUokkB_3CoJFMLUImHNIRt_t0m/s2067/DSC04865.JPG",
+        ],
+        description:
+          "Escape the city heat with an <strong>Eden Nature Park private tour</strong>. Nestled at the foot of Mt. Talomo, this 80-hectare park offers breathtaking views of the city and the gulf. You’ll enjoy a curated walk through the organic gardens and pine forests in complete privacy.<br><br>In the afternoon, immerse yourself in the <strong>Malagos Garden experience</strong>. Visit the chocolate museum to taste world-class, <i>award-winning Malagos Chocolate</i>, and wander through the butterfly sanctuary and orchid gardens. It is a sensory journey through Davao's rich biodiversity.",
         activities: [
           "Eden Nature Park private tour",
           "Malagos Garden experience",
@@ -535,6 +660,12 @@ export const Packages: PackageT[] = [
       },
       {
         day: 3,
+        images: [
+          "https://i.pinimg.com/originals/36/7d/2e/367d2ee9be911d8db4d3b1d9a90c246f.jpg",
+          "https://tourism.davaocity.gov.ph/wp-content/uploads/2018/10/21306875915_30ac9986df_b.jpg",
+        ],
+        description:
+          "Witness the majesty of the national bird during a <strong>Philippine Eagle Center VIP tour</strong>. This conservation center is home to the rarest eagles in the world, and your private tour provides <i>exclusive insights</i> into their preservation.<br><br>Head back to the city for a premier <strong>Shopping at Abreeza Mall</strong> experience. Browse through high-end boutiques and local designer shops in an upscale, garden-integrated setting. It’s the perfect time to find luxury 'pasalubong' or treat yourself to something special.",
         activities: [
           "Philippine Eagle Center VIP tour",
           "Shopping at Abreeza Mall",
@@ -542,14 +673,44 @@ export const Packages: PackageT[] = [
       },
       {
         day: 4,
+        images: [
+          "https://gttp.images.tshiftcdn.com/481671/x/0/.jpg?ar=1.91:1&w=1200&fit=crop",
+          "https://pearlfarmresort.com/wp-content/uploads/2023/06/Pearl-Farm-Resort-Photos-Gallery-2023-12.jpeg",
+        ],
+        description:
+          "Trade the city lights for turquoise waters with a <strong>Private transfer to Samal Island</strong>. You will be whisked away via a dedicated boat to reach the island's most iconic destination.<br><br>Complete your <strong>Check-in at Pearl Farm Beach Resort</strong>, a former pearl farm turned into a world-class sanctuary. Your <i>luxury villa</i> awaits, offering stunning views of the sea and the surrounding islands. Spend the rest of your day breathing in the salty air and feeling the white sand between your toes.",
         activities: [
           "Private transfer to Samal Island",
           "Check-in at Pearl Farm Beach Resort",
         ],
       },
-      { day: 5, activities: ["Island hopping (private yacht)", "Snorkeling"] },
-      { day: 6, activities: ["Spa & beachfront relaxation", "Sunset dinner"] },
-      { day: 7, activities: ["Free time", "Departure"] },
+      {
+        day: 5,
+        activities: ["Island hopping (private yacht)", "Snorkeling"],
+        images: [
+          "https://triphappy.ph/wp-content/uploads/2025/08/1_jokai-with-watermark.jpg",
+          "https://gttp.images.tshiftcdn.com/418881/x/0/topbanner-scuba-diving-philippines.jpg?auto=format%2Ccompress&ch=Width%2CDPR&dpr=2&ixlib=php-3.3.0&fit=crop&w=540&h=240&q=50",
+        ],
+        description:
+          "Experience the ultimate sea adventure with an <strong>Island hopping (private yacht)</strong> excursion. Sail through the Davao Gulf in style, stopping at secluded coves far from the crowds. Enjoy <strong>Snorkeling</strong> in <i>vibrant coral gardens</i> teeming with tropical fish, with a dedicated crew on hand to ensure your comfort and safety throughout the voyage.",
+      },
+      {
+        day: 6,
+        activities: ["Spa & beachfront relaxation", "Sunset dinner"],
+        images: [
+          "https://www.dusit.com/dusitd2-davao/wp-content/uploads/sites/18/cache/2020/07/D2DV_Facilities_Namm-Spa/3414448274.jpg",
+          "https://fadistrik.com/wp-content/uploads/2025/02/Sunset-Dining-at-Oceanfront-Terrace-1-scaled-1.jpeg",
+        ],
+        description:
+          "Dedicate your penultimate day to <strong>Spa & beachfront relaxation</strong>. Surrender to a traditional Filipino hilot massage or a signature body scrub while listening to the gentle lapping of the waves.<br><br>As the sky begins to change, enjoy a private <strong>Sunset dinner</strong> set right on the beach. Dine under the stars with a <i>customized menu</i> prepared by a private chef, celebrating your final night in paradise with the sound of the ocean as your soundtrack.",
+      },
+      {
+        day: 7,
+        activities: ["Free time", "Departure"],
+        images: [],
+        description:
+          "Enjoy some final <strong>Free time</strong> to swim in the infinity pool or take one last walk along the white sand beach. Savor a slow breakfast with a view of the Samal coastline before your <strong>Departure</strong>. A private boat and car service will ensure your journey back to the airport is as comfortable as your stay, leaving you with <b>unforgettable memories</b> of Davao's finest.",
+      },
     ],
     inclusion: [
       "6 nights luxury accommodation (DusitD2 + Pearl Farm)",
@@ -597,17 +758,75 @@ export const Packages: PackageT[] = [
     ],
     duration: "8D7N",
     itinerary: [
-      { day: 1, activities: ["VIP arrival", "Check-in at Nay Palad Hideaway"] },
+      {
+        day: 1,
+        activities: ["VIP arrival", "Check-in at Nay Palad Hideaway"],
+        images: [
+          "https://colto.sg/wp-content/uploads/2024/04/All-inclusive-resorts-in-Southeast-Asia-Nay-Palad-Hideaway.jpg",
+        ],
+        description:
+          "Your journey to paradise begins with a <strong>VIP arrival</strong>, where you’ll be met at the airport and whisked away in a private vehicle. Experience a seamless <strong>Check-in at Nay Palad Hideaway</strong>, an ultra-exclusive resort where everything is tailored to your desires. Spend your first afternoon exploring the <i>meticulously landscaped grounds</i> or lounging in your private villa as you transition into 'island time.'",
+      },
       {
         day: 2,
+        images: [
+          "https://www.detourista.com/wp/wp-content/uploads/Unorganized/002-Cloud-9-surfing-Siargao-Island-101117-162058-1200x900.jpg",
+        ],
+        description:
+          "Experience the thrill of the ocean with a <strong>Private surf lesson at Cloud 9</strong>. With an expert instructor by your side, you'll tackle the world-famous waves of Siargao in a safe and supportive environment. After a morning in the surf, unwind with an elegant <strong>Beachfront dinner</strong> under the stars. Enjoy a <i>custom-curated menu</i> of fresh seafood and organic local produce, accompanied by the gentle sound of the crashing waves.",
         activities: ["Private surf lesson at Cloud 9", "Beachfront dinner"],
       },
-      { day: 3, activities: ["Island hopping yacht tour"] },
-      { day: 4, activities: ["Sugba Lagoon private tour"] },
-      { day: 5, activities: ["Cave pool exploration", "Massage spa day"] },
-      { day: 6, activities: ["Mangrove tour", "Sunset cruise"] },
-      { day: 7, activities: ["Free luxury resort day"] },
-      { day: 8, activities: ["Departure"] },
+      {
+        day: 3,
+        activities: ["Island hopping yacht tour"],
+        images: [
+          "https://meanttogo.com/wp-content/uploads/2018/05/britania-island-hopping.jpg",
+        ],
+        description:
+          "Board your vessel for an <strong>Island hopping yacht tour</strong> across the Surigao Strait. This private charter allows you to bypass the crowds, visiting secluded sandbars and hidden lagoons at your own pace. Lounge on the deck with <i>chilled refreshments</i> and enjoy a gourmet picnic on a deserted beach, surrounded by nothing but crystal-clear water and white sand.",
+      },
+      {
+        day: 4,
+        activities: ["Sugba Lagoon private tour"],
+        images: [
+          "https://www.jonnymelon.com/wp-content/uploads/2018/10/sugba-lagoon-26.jpg",
+        ],
+        description:
+          "Discover one of the island's most stunning natural wonders with a <strong>Sugba Lagoon private tour</strong>. Navigate through an expansive maze of mangroves before reaching the vibrant blue lagoon. Spend your day <b>paddleboarding through the calm waters</b>, jumping from the iconic wooden diving board, or simply soaking in the tranquil beauty of this isolated sanctuary.",
+      },
+      {
+        day: 5,
+        activities: ["Cave pool exploration", "Massage spa day"],
+        images: [
+          "https://pinaywise.com/wp-content/uploads/2024/03/Sohoton-Caves-Surigao-del-Norte-Mindanao.jpg",
+          "https://images.summitmedia-digital.com/spotph/images/2018/07/06/spa-resort-Siargao.jpg",
+        ],
+        description:
+          "Start your day with a <strong>Cave pool exploration</strong>, venturing into the island's limestone heart to swim in refreshing, crystal-clear subterranean waters. Follow this adventure with a <strong>Massage spa day</strong> back at the resort. Indulge in <i>traditional Filipino healing rituals</i> and aromatherapy treatments designed to rejuvenate your body and soul after days of island exploration.",
+      },
+      {
+        day: 6,
+        activities: ["Mangrove tour", "Sunset cruise"],
+        images: [
+          "https://langkawigo.com/wp-content/uploads/2024/01/Mangrove-Kayaking-Tour-Langkawi-3-1.webp",
+        ],
+        description:
+          "Take a quiet <strong>Mangrove tour</strong> through the Del Carmen reserve, the largest of its kind in the Philippines. Learn about the vital ecosystem as you glide through the emerald-green waterways. As the day ends, embark on a <strong>Sunset cruise</strong>. Sip on <i>premium cocktails</i> while watching the sky ignite in shades of fiery orange and deep purple, reflecting off the vast Pacific Ocean.",
+      },
+      {
+        day: 7,
+        activities: ["Free luxury resort day"],
+        images: [],
+        description:
+          "Enjoy a <strong>Free luxury resort day</strong> to take full advantage of everything Nay Palad has to offer. Whether it's an impromptu yoga session in the pavilion, a movie night under the palms, or simply lounging by the infinity pool, the day is <i>entirely yours to design</i>. This is your time to fully embrace the 'barefoot luxury' philosophy and find total peace in your surroundings.",
+      },
+      {
+        day: 8,
+        activities: ["Departure"],
+        images: [],
+        description:
+          "Savor a slow, final breakfast with a view of the coconut groves before your <strong>Departure</strong>. Your private transfer will ensure a smooth journey back to the airport. You leave Siargao not just with a tan, but with a <b>refreshed spirit</b> and the lasting memory of a truly bespoke tropical escape.",
+      },
     ],
     inclusion: [
       "7 nights at Nay Palad Hideaway",
@@ -646,19 +865,76 @@ export const Packages: PackageT[] = [
     ],
     duration: "10D9N",
     itinerary: [
-      { day: 1, activities: ["Arrival", "Check-in at Ciudad Hotel Zamboanga"] },
+      {
+        day: 1,
+        activities: ["Arrival", "Check-in at Ciudad Hotel Zamboanga"],
+        images: [],
+        description:
+          "Bienvenido a Zamboanga! Upon your <strong>Arrival</strong>, you will be greeted by the warm breeze of the peninsula. Enjoy a smooth <strong>Check-in at Ciudad Hotel Zamboanga</strong>, an elegant retreat that reflects the city's unique blend of Spanish and Filipino aesthetics. Take the evening to settle into your suite and enjoy the refined ambiance of one of the city's most storied hotels.",
+      },
       {
         day: 2,
+        images: [],
+        description:
+          "Step back in time with a <strong>Fort Pilar historical tour</strong>. This 17th-century Spanish military defense fortress is now a major landmark and an open-air shrine. Afterward, continue with a <strong>City heritage walk</strong>, where you’ll hear the local <i>Chavacano</i> language spoken—a Spanish-based creole that makes this city unique in Asia. You'll pass by colonial-style buildings that tell the tale of the city's vibrant past.",
         activities: ["Fort Pilar historical tour", "City heritage walk"],
       },
-      { day: 3, activities: ["Yakan Village cultural immersion"] },
-      { day: 4, activities: ["Private boat to Great Santa Cruz Island"] },
-      { day: 5, activities: ["Pink Beach relaxation day"] },
-      { day: 6, activities: ["Island hopping private tour"] },
-      { day: 7, activities: ["Local cuisine fine dining"] },
-      { day: 8, activities: ["Spa day at hotel"] },
-      { day: 9, activities: ["Free luxury day"] },
-      { day: 10, activities: ["Departure"] },
+      {
+        day: 3,
+        activities: ["Yakan Village cultural immersion"],
+        images: [],
+        description:
+          "Experience a <strong>Yakan Village cultural immersion</strong>. Here, you will meet the indigenous Yakan weavers and witness the intricate process of creating <i>Tennun</i>—traditional hand-woven cloth known for its geometric patterns and bold colors. It is a rare opportunity to engage with the master artisans and bring home a piece of living history.",
+      },
+      {
+        day: 4,
+        activities: ["Private boat to Great Santa Cruz Island"],
+        images: [],
+        description:
+          "Board a <strong>Private boat to Great Santa Cruz Island</strong>. This exclusive voyage takes you across the Basilan Strait to one of the most unique islands in the world. As you approach, you'll notice the <i>distinctive pink hue</i> of the shoreline, created by the pulverized red organ pipe coral mixed with white sand. Your private setup ensures a serene start to your island getaway.",
+      },
+      {
+        day: 5,
+        activities: ["Pink Beach relaxation day"],
+        images: [],
+        description:
+          "Board a <strong>Private boat to Great Santa Cruz Island</strong>. This exclusive voyage takes you across the Basilan Strait to one of the most unique islands in the world. As you approach, you'll notice the <i>distinctive pink hue</i> of the shoreline, created by the pulverized red organ pipe coral mixed with white sand. Your private setup ensures a serene start to your island getaway.",
+      },
+      {
+        day: 6,
+        activities: ["Island hopping private tour"],
+        images: [],
+        description:
+          "Embark on an <strong>Island hopping private tour</strong> to discover the surrounding islets. From the sandbars of Little Santa Cruz Island to the thriving mangrove forests, your private guide will lead you to the best spots for <i>snorkeling and bird watching</i>. The biodiversity in these protected waters is truly world-class.",
+      },
+      {
+        day: 7,
+        activities: ["Local cuisine fine dining"],
+        images: [],
+        description:
+          "Indulge in a <strong>Local cuisine fine dining</strong> experience. Savor Zamboanga’s signature dish, the <i>Curacha</i> (spig spanner crab) served with Alavar sauce—a secret blend of coconut milk and spices. This evening is a celebration of the city's rich culinary fusion, served in an upscale setting that highlights the best of Mindanaoan flavors.",
+      },
+      {
+        day: 8,
+        activities: ["Spa day at hotel"],
+        images: [],
+        description:
+          "After days of exploration, enjoy a <strong>Spa day at hotel</strong>. Treat yourself to a series of wellness therapies inspired by <i>traditional southern healing practices</i>. Whether it’s a full-body massage or a refreshing scrub, this day is designed to restore your energy and provide a deep sense of relaxation within the comfort of Ciudad Hotel.",
+      },
+      {
+        day: 9,
+        activities: ["Free luxury day"],
+        images: [],
+        description:
+          "Embrace a <strong>Free luxury day</strong>. This is your time to revisit a favorite spot in the city, indulge in some high-end shopping for south sea pearls, or simply relax by the pool. The day is <i>entirely unscripted</i>, allowing you to soak in the final moments of your Zamboangueno journey at your own leisure.",
+      },
+      {
+        day: 10,
+        activities: ["Departure"],
+        images: [],
+        description:
+          "Enjoy a final gourmet breakfast before your <strong>Departure</strong>. As your private transfer takes you to the airport, you'll carry with you the <b>vibrant spirit</b> of the Latin City—a blend of history, culture, and some of the rarest natural landscapes in the Philippines. Hasta la vista!",
+      },
     ],
     inclusion: [
       "9 nights luxury hotel accommodation",
@@ -698,30 +974,209 @@ export const Packages: PackageT[] = [
     ],
     duration: "24D23N",
     itinerary: [
-      { day: 1, activities: ["Arrival in Davao", "DusitD2 luxury stay"] },
-      { day: 2, activities: ["Davao city tour"] },
-      { day: 3, activities: ["Samal Island yacht tour"] },
-      { day: 4, activities: ["Eden Nature Park VIP tour"] },
-      { day: 5, activities: ["Transfer to Bukidnon"] },
-      { day: 6, activities: ["Dahilayan luxury stay"] },
-      { day: 7, activities: ["Highland leisure"] },
-      { day: 8, activities: ["Transfer to CDO"] },
-      { day: 9, activities: ["Whitewater rafting VIP"] },
-      { day: 10, activities: ["Rest day luxury hotel"] },
-      { day: 11, activities: ["Fly to Siargao"] },
-      { day: 12, activities: ["Island hopping yacht"] },
-      { day: 13, activities: ["Surf lessons"] },
-      { day: 14, activities: ["Spa day"] },
-      { day: 15, activities: ["Transfer to Zamboanga"] },
-      { day: 16, activities: ["Pink beach tour"] },
-      { day: 17, activities: ["Cultural tour"] },
-      { day: 18, activities: ["Island hopping"] },
-      { day: 19, activities: ["Luxury rest day"] },
-      { day: 20, activities: ["Fine dining experience"] },
-      { day: 21, activities: ["Free luxury day"] },
-      { day: 22, activities: ["Shopping & leisure"] },
-      { day: 23, activities: ["Final spa & dinner"] },
-      { day: 24, activities: ["Departure"] },
+      {
+        day: 1,
+        activities: ["Arrival in Davao", "DusitD2 luxury stay"],
+        images: [
+          "https://edgedavao.net/wp-content/uploads/2021/10/1001dusit.jpg",
+        ],
+        description:
+          "Your grand journey begins with a <strong>Arrival in Davao</strong>. You will be escorted to your <strong>DusitD2 luxury stay</strong>, where modern Thai elegance meets Filipino warmth. Spend your first evening relaxing in the courtyard pool or enjoying a signature cocktail at the Madayaw Bar.",
+      },
+      {
+        day: 2,
+        activities: ["Davao city tour"],
+        images: [
+          "https://realbreezedavaotours.com/wp-content/uploads/2018/06/Davao-City-Tour.jpg",
+        ],
+        description:
+          "Discover the heritage of the city with a <strong>Davao city tour</strong>. Visit the People's Park, the Davao Museum, and the San Pedro Cathedral. End the day with an <i>exclusive view</i> of the city lights from a hilltop restaurant.",
+      },
+      {
+        day: 3,
+        activities: ["Samal Island yacht tour"],
+        images: [
+          "https://wayph.com/wp-content/uploads/2016/12/Samal_Island_and_Talikud_Island-Spectacular_Twin-Destinations_in_Davao-6-1.png",
+        ],
+        description:
+          "Escape to the turquoise waters of the gulf with a <strong>Samal Island yacht tour</strong>. Spend your day lounging on the deck of a private vessel, stopping at secluded coves for a swim or a <i>gourmet seafood lunch</i> served on board.",
+      },
+      {
+        day: 4,
+        activities: ["Eden Nature Park VIP tour"],
+        images: [
+          "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/87/36/58.jpg",
+        ],
+        description:
+          "Head to the highlands for an <strong>Eden Nature Park VIP tour</strong>. Explore the pine-scented trails, organic greenhouses, and the butterfly sanctuary in a <b>private guided shuttle</b>, offering a refreshing break from the tropical heat.",
+      },
+      {
+        day: 5,
+        activities: ["Transfer to Bukidnon"],
+        images: [],
+        description:
+          "Prepare for a scenic drive during your <strong>Transfer to Bukidnon</strong>. Watch the landscape shift from coastal plains to the <b>majestic mountain ranges</b> and vast pineapple plantations that define this landlocked province.",
+      },
+      {
+        day: 6,
+        activities: ["Dahilayan luxury stay"],
+        images: [
+          "https://i1.wp.com/www.projectlupad.com/wp-content/uploads/2019/05/World-Class-Dahilayan-Parks-in-Mindanao-Copyright-to-Project-LUPAD-3.jpg?fit=3072%2C1929&ssl=1",
+        ],
+        description:
+          "Waking up to the cool mountain breeze during your <strong>Dahilayan luxury stay</strong> is a treat for the senses. Nestled among towering pine trees, your accommodation offers a <i>serene escape</i> with world-class amenities.",
+      },
+      {
+        day: 7,
+        activities: ["Highland leisure"],
+        images: [
+          "https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/grjw8p1ytq8adzxtlnou/Highlands%20Tour%20in%20Davao.jpg",
+        ],
+        description:
+          "Spend a day of <strong>Highland leisure</strong>. Whether you choose to walk through the forest trails, enjoy a quiet book by the fireplace, or simply take in the <b>panoramic mountain views</b>, today is about peace and altitude.",
+      },
+      {
+        day: 8,
+        activities: ["Transfer to CDO"],
+        images: [],
+        description:
+          "Descend from the mountains for your <strong>Transfer to CDO</strong>. Known as the 'City of Golden Friendship,' Cagayan de Oro welcomes you with its vibrant urban energy and warm local hospitality.",
+      },
+      {
+        day: 9,
+        activities: ["Whitewater rafting VIP"],
+        images: [
+          "https://adventurebackpack.com/images/white-water-rafting-davao-river-booking-guide.webp",
+          "https://1.bp.blogspot.com/-6W4WfwNRRB4/Xx7blOXfHlI/AAAAAAAA0l4/aFK1CZjQVL8jL8HGg6otNpHJIdpioAypgCLcBGAsYHQ/s1600/Davao%2BRiver%2BRafting%2B7.jpg",
+          "https://1.bp.blogspot.com/-S3OGV_h_9qI/Xx7bf8_iD8I/AAAAAAAA0l0/2c9K1f2Zif8oa51LLvUFGeDYTTrKwslBwCLcBGAsYHQ/s1600/Davao%2BRiver%2BRafting%2B3.jpg",
+        ],
+        description:
+          "Get your adrenaline pumping with a <strong>Whitewater rafting VIP</strong> experience. Navigate the Cagayan de Oro River's famous rapids with <i>expert guides</i> and top-tier gear, followed by a private riverside lunch.",
+      },
+      {
+        day: 10,
+        activities: ["Rest day luxury hotel"],
+        images: [
+          "https://cdo-fitness.com/wp-content/uploads/2023/04/Zona-termal3-scaled.jpg",
+          "https://www.ultrawindsresort.com/medias/article/big/100/can-2311-edit.jpg",
+        ],
+        description:
+          "After the excitement of the rapids, enjoy a <strong>Rest day luxury hotel</strong>. Take advantage of the spa, the infinity pool, or simply enjoy <i>fine room service</i> as you recharge for the next leg of your journey.",
+      },
+      {
+        day: 11,
+        activities: ["Fly to Siargao"],
+        images: [],
+        description:
+          "It’s time for a change of pace as you <strong>Fly to Siargao</strong>. Upon landing, you’ll feel the immediate shift to the <i>island’s laid-back vibe</i>. Your private transfer will take you to your beachfront resort.",
+      },
+      {
+        day: 12,
+        activities: ["Island hopping yacht"],
+        images: [
+          "https://global-uploads.webflow.com/576fd5a8f192527e50a4b95c/5ed8d4e87cc915566358b385_daku%20island%20siargao.jpg",
+        ],
+        description:
+          "Experience the sea in style with an <strong>Island hopping yacht</strong> tour. Visit Naked, Daku, and Guyam islands on a <b>private charter</b>, enjoying the privacy and luxury of a vessel equipped for the ultimate sun-soaked day.",
+      },
+      {
+        day: 13,
+        activities: ["Surf lessons"],
+        images: [
+          "https://gttp.images.tshiftcdn.com/437898/x/0/with-this-siargao-island-surfing-lesson-you-can-enjoy-the-stunning-beauty-of-the-island-and-make-lasting-memories-while-on-the-waves-1?ar=1.91:1&w=1200&fit=crop",
+          "https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/cljhlek7gypasfv0x56e/Surfing%20Lessons%20in%20Siargao.jpg",
+        ],
+        description:
+          "Try your hand at the island's most famous sport with <strong>Surf lessons</strong>. Whether you are a beginner or a pro, a private instructor will guide you through the <i>rhythmic Pacific swells</i> of Cloud 9 or a quieter secret spot.",
+      },
+      {
+        day: 14,
+        activities: ["Spa day"],
+        images: [
+          "https://images.summitmedia-digital.com/spotph/images/2018/07/06/spa-resort-Siargao.jpg",
+        ],
+        description:
+          "Soothe your sun-kissed skin with a <strong>Spa day</strong>. Indulge in traditional Filipino hilot or a refreshing coconut scrub, designed to <b>rejuvenate your body</b> after days of saltwater and adventure.",
+      },
+      {
+        day: 15,
+        activities: ["Transfer to Zamboanga"],
+        images: [],
+        description:
+          "Journey to the southernmost tip of the peninsula with your <strong>Transfer to Zamboanga</strong>. Step into a city where <i>Spanish-creole heritage</i> remains a living part of the daily culture.",
+      },
+      {
+        day: 16,
+        activities: ["Pink beach tour"],
+        images: [
+          "https://res.klook.com/image/upload/fl_lossy.progressive/q_auto/f_auto/c_fill/blogen/2018/04/image14-copy.jpg",
+        ],
+        description:
+          "Board a private boat for the iconic <strong>Pink beach tour</strong> at Great Santa Cruz Island. Walk along the <b>blush-colored sands</b> and snorkel in the protected waters of one of the world's rarest natural wonders.",
+      },
+      {
+        day: 17,
+        activities: ["Cultural tour"],
+        images: [
+          "https://outoftownblog.com/wp-content/uploads/2020/07/Subanen-dancers.jpeg",
+          "https://gttp.images.tshiftcdn.com/222243/x/0/yakan-weaving-village-5.jpg?ar=1.91:1&w=1200&fit=crop",
+        ],
+        description:
+          "Immerse yourself in history with a <strong>Cultural tour</strong>. Visit Fort Pilar, the Yakan Weaving Village, and the historic City Hall, where the sounds of <i>Chavacano</i> fill the air.",
+      },
+      {
+        day: 18,
+        activities: ["Island hopping"],
+        images: [
+          "https://www.taraletsanywhere.com/wp-content/uploads/2018/10/bloggers-island-hopping-once-islas.jpg",
+        ],
+        description:
+          "Head back to the sea for an <strong>Island hopping</strong> tour of the 11 islands (Once Islas). This private tour offers <b>exclusive access</b> to pristine white sandbars and untouched marine sanctuaries.",
+      },
+      {
+        day: 19,
+        activities: ["Luxury rest day"],
+        images: [],
+        description:
+          "Slow down with a <strong>Luxury rest day</strong>. Enjoy the refined amenities of your hotel, perhaps lounging by the pool with a glass of wine or exploring the <i>local artisanal shops</i> for rare pearls.",
+      },
+      {
+        day: 20,
+        activities: ["Fine dining experience"],
+        images: [
+          "https://1.bp.blogspot.com/-C78-eHmfliE/YaRSVUqRXJI/AAAAAAABNJQ/mfHmtObztm4vEE_R5451NI91nUKQAG7XQCLcBGAsYHQ/s1600/Stonehill%2BFarms%2BIpil%2B2.jpg",
+        ],
+        description:
+          "Indulge in a <strong>Fine dining experience</strong> centered around the famous <i>Curacha with Alavar sauce</i>. This culinary masterpiece is a must-try for any luxury traveler visiting Zamboanga.",
+      },
+      {
+        day: 21,
+        activities: ["Free luxury day"],
+        images: [],
+        description:
+          "Your <strong>Free luxury day</strong> is a blank canvas. Revisit a favorite spot, take a private photography tour of the local markets, or simply enjoy the <b>leisurely pace</b> of the Latin City.",
+      },
+      {
+        day: 22,
+        activities: ["Shopping & leisure"],
+        images: [],
+        description:
+          "Spend your day <strong>Shopping & leisure</strong>. Zamboanga is famous for its <i>exquisite pearls</i> and intricate Yakan fabrics—perfect keepsakes to remember your grand Mindanao journey.",
+      },
+      {
+        day: 23,
+        activities: ["Final spa & dinner"],
+        images: [],
+        description:
+          "Celebrate your final full day with a <strong>Final spa & dinner</strong>. Reflect on your 24-day odyssey over a <i>curated multi-course meal</i> that brings together the flavors of the regions you've explored.",
+      },
+      {
+        day: 24,
+        activities: ["Departure"],
+        images: [],
+        description:
+          "After a final gourmet breakfast, proceed to your <strong>Departure</strong>. As you head to the airport, you’ll carry with you a <b>complete tapestry</b> of Mindanao’s mountains, rivers, and seas.",
+      },
     ],
     inclusion: [
       "23 nights luxury accommodation across Mindanao",
@@ -764,14 +1219,31 @@ export const Packages: PackageT[] = [
       {
         day: 1,
         activities: ["Arrival and city tour", "Visit Maria Cristina Falls"],
+        images: [
+          "https://i.pinimg.com/originals/af/79/3e/af793eaedb8072d5577c4faa6407b8fd.jpg",
+        ],
+        description:
+          "Welcome to Iligan, the City of Majestic Waterfalls! Your journey begins with an <strong>Arrival and city tour</strong>, taking you through the heart of this industrial and cultural hub. The highlight of your day is a <strong>Visit to Maria Cristina Falls</strong>. Known as the 'Twin Falls,' this landmark is not only a <i>stunning natural wonder</i> but also a primary source of hydroelectric power for Mindanao. You’ll witness the sheer force of the water as it plunges 98 meters into the Agus River.",
       },
       {
         day: 2,
         activities: ["Tinago Falls trekking and swimming"],
+        images: [
+          "https://farm4.staticflickr.com/3730/10666308825_131989ec99_o.jpg",
+          "https://www.rappler.com/tachyon/r3-assets/456DD77DF51741718BE393AC4E8F93B5/img/D5881CCE80154286819EC80655BC3612/TINAGO_FALLS.jpg",
+        ],
+        description:
+          "Prepare for an adventurous morning of <strong>Tinago Falls trekking and swimming</strong>. To reach this 'hidden' treasure, you will descend roughly 500 winding steps into a deep ravine. Once at the bottom, you are rewarded with a <i>breathtaking blue lagoon</i> surrounded by high rock walls and lush greenery. Enjoy a cold, invigorating swim or take a bamboo raft to get directly under the cascading waters for a <b>natural water massage</b>.",
       },
       {
         day: 3,
         activities: ["Mimbalot Falls visit", "Free time and local food tour"],
+        images: [
+          "https://farm8.staticflickr.com/7317/10863179914_9eb19067ca_o.jpg",
+          "https://i2.wp.com/unusualplaces.org/wp-content/uploads/2017/09/tinagofalls2.jpg",
+        ],
+        description:
+          "Start your final day with a <strong>Mimbalot Falls visit</strong>. Unlike the first two, Mimbalot offers a more tranquil experience with its rocky cascades and accessible picnic areas. It’s the perfect spot to relax and take photos. Afterward, enjoy some <strong>Free time and a local food tour</strong>. Don't leave without trying the famous <i>Iligan Lechon</i> or the spicy 'halang-halang,' ensuring you leave the city with a <b>satisfied palate</b> and a heart full of memories.",
       },
     ],
     inclusion: ["Van transfers", "Tour guide", "Entrance fees"],
@@ -807,6 +1279,8 @@ export const LimitedDeal = [
           "Visit Cloud 9 Boardwalk & sunset viewing",
           "Dinner by the beach",
         ],
+        images: [],
+        description: "",
       },
       {
         day: 2,
@@ -816,6 +1290,8 @@ export const LimitedDeal = [
           "Visit Sugba Lagoon (kayaking/swimming)",
           "Free time or nightlife in General Luna",
         ],
+        images: [],
+        description: "",
       },
       {
         day: 3,
@@ -824,6 +1300,8 @@ export const LimitedDeal = [
           "Souvenir shopping",
           "Check-out and departure",
         ],
+        images: [],
+        description: "",
       },
     ],
     inclusion: [
@@ -874,6 +1352,8 @@ export const LimitedDeal = [
           "Visit Burnham Park (boat ride optional)",
           "Session Road night stroll",
         ],
+        images: [],
+        description: "",
       },
       {
         day: 2,
@@ -883,6 +1363,8 @@ export const LimitedDeal = [
           "Strawberry Farm visit in La Trinidad",
           "Cafe hopping",
         ],
+        images: [],
+        description: "",
       },
       {
         day: 3,
@@ -891,6 +1373,8 @@ export const LimitedDeal = [
           "Pasalubong shopping",
           "Check-out and departure",
         ],
+        images: [],
+        description: "",
       },
     ],
     inclusion: [
@@ -940,6 +1424,8 @@ export const LimitedDeal = [
           "City tour (Cathedral, Baywalk)",
           "Firefly watching tour",
         ],
+        images: [],
+        description: "",
       },
       {
         day: 2,
@@ -949,6 +1435,8 @@ export const LimitedDeal = [
           "Lunch by the beach",
           "Return to city",
         ],
+        images: [],
+        description: "",
       },
       {
         day: 3,
@@ -957,6 +1445,8 @@ export const LimitedDeal = [
           "Swimming and snorkeling",
           "Check-out and departure",
         ],
+        images: [],
+        description: "",
       },
     ],
     inclusion: [
@@ -1002,6 +1492,8 @@ export const LimitedDeal = [
           "Visit Echo Valley & Hanging Coffins",
           "Bonfire night",
         ],
+        images: [],
+        description: "",
       },
       {
         day: 2,
@@ -1010,10 +1502,14 @@ export const LimitedDeal = [
           "Sumaguing Cave spelunking",
           "Visit Bomod-ok Falls",
         ],
+        images: [],
+        description: "",
       },
       {
         day: 3,
         activities: ["Coffee shop visit", "Souvenir shopping", "Departure"],
+        images: [],
+        description: "",
       },
     ],
     inclusion: [
@@ -1057,6 +1553,8 @@ export const LimitedDeal = [
           "Hotel check-in",
           "Free time",
         ],
+        images: [],
+        description: "",
       },
       {
         day: 2,
@@ -1066,10 +1564,14 @@ export const LimitedDeal = [
           "Kawasan Falls canyoneering",
           "Dinner and rest",
         ],
+        images: [],
+        description: "",
       },
       {
         day: 3,
         activities: ["Leisure time", "Return to Cebu City", "Departure"],
+        images: [],
+        description: "",
       },
     ],
     inclusion: [

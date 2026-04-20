@@ -26,7 +26,7 @@ export default function Input({
     <div className={containerClassName}>
       {/* Label */}
       {label && (
-        <label className="font-regular mb-1 block text-sm text-primary-gray-200">
+        <label className="font-regular mb-1 block w-full text-left text-sm text-primary-gray-200">
           {label}
         </label>
       )}

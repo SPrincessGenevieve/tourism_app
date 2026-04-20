@@ -12,6 +12,8 @@ export type ReviewT = {
 export type IterinaryT = {
   day: number
   activities: string[]
+  images?: string[]
+  description?: string
 }
 
 export type PackageT = {
@@ -53,4 +55,5 @@ export type PackageDealT = {
     remainingSlots: number
     badge: string
   }
+  reviews?: ReviewT[]
 }

@@ -26,8 +26,6 @@ export default function Packages() {
     }
   }, [])
 
-  console.log("WIDTH: ", width)
-
   return (
     <div className="relative min-h-screen w-full">
       <Sidebar containerWidth={width} index={index}></Sidebar>
