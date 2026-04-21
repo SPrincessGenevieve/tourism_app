@@ -43,7 +43,7 @@ export default function PackageDetailHeader({
   }
 
   return (
-    <div className="relative h-screen w-full">
+    <div className="relative z-40 h-screen w-full">
       <Sidebar containerWidth={width} index={index}></Sidebar>
       <div className="absolute inset-0 overflow-hidden">
         {/* CURRENT IMAGE */}

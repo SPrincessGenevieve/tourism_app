@@ -14,20 +14,28 @@ import { AnimatePresence } from "motion/react"
 
 export default function PackageReview({
   item,
+  width,
 }: {
+  width: number
   item: PackageT | PackageDealT
 }) {
   const [activeImage, setActiveImage] = React.useState<string | null>(null)
 
   return (
     <div className="mb-8 flex flex-col gap-4">
-      <div className="flex w-full items-center justify-between gap-8 rounded-2xl border-2 border-gray-100 p-4">
-        <div className="flex items-center gap-4">
+      <div
+        className={`flex ${width > 760 ? "" : "flex-col"} w-full items-center justify-between gap-8 rounded-2xl border-2 border-gray-100 p-4`}
+      >
+        <div
+          className={`flex items-center gap-4 ${width > 495 ? "" : "flex-col"}`}
+        >
           <div className="flex items-center gap-2">
             <IconLaurelWreath size={35} strokeWidth={1}></IconLaurelWreath>
             <p className="text-xl font-semibold">Tourist Favorite</p>
           </div>
-          <p className="text-xl font-semibold">
+          <p
+            className={`text-xl font-semibold ${width > 495 ? "" : "text-center"}`}
+          >
             Highly rated and trusted by travelers
           </p>
         </div>
@@ -50,7 +58,7 @@ export default function PackageReview({
         {item.reviews?.map((review, i) => (
           <div
             key={i}
-            className="mb-4 break-inside-avoid rounded-2xl border p-4"
+            className="mb-4 break-inside-avoid rounded-2xl border bg-primary-purple-100/5 p-4"
           >
             <div className="flex items-start justify-between">
               <div className="flex items-center gap-4">
@@ -71,7 +79,7 @@ export default function PackageReview({
                 ))}
               </div>
             </div>
-            <div className="flex flex-col gap-4">
+            <div className="my-4 flex flex-col gap-4">
               <p>{review.comment}</p>
               <div className="flex gap-2">
                 {review.media.map((rev2, i) => (

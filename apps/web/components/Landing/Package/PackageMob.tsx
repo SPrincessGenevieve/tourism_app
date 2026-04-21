@@ -29,12 +29,15 @@ import PackageCard from "@/components/Packages/PackageCard"
 import { Book } from "lucide-react"
 import PackageDealCard from "@/components/Packages/PackageDealCard"
 import { Skeleton } from "@workspace/ui/components/skeleton"
+import { useRouter } from "next/navigation"
 
 type PackageMT = {
   width: number
 }
 
 export default function PackageMob({ width }: PackageMT) {
+  const router = useRouter()
+
   const [locationFilter, setLocationFilter] = useState<string[]>([])
   const [durationFilter, setDurationFilter] = useState<string[]>([])
   const [range, setRange] = useState([2000, 50000])
@@ -45,6 +48,7 @@ export default function PackageMob({ width }: PackageMT) {
 
   const [selectedDurations, setSelectedDurations] = useState<string[]>([])
   const [selectedLocations, setSelectedLocations] = useState<string[]>([])
+  const [loadingIndex, setLoadingIndex] = useState<number | null>(null)
 
   const [appliedFilters, setAppliedFilters] = useState({
     range: [2000, 150000] as [number, number],
@@ -177,6 +181,11 @@ export default function PackageMob({ width }: PackageMT) {
       ? filteredPackages.length === 0
       : filteredDeals.length === 0
 
+  const handleViewDetails = (name: string, index: number, tab: string) => {
+    setLoadingIndex(index)
+    router.push(`/packages/${tab === "tour" ? "tour" : "deals"}/${name}`)
+  }
+
   return (
     <div className="flex w-full flex-col gap-4">
       <div className="flex w-full justify-between border-b-2 border-primary-gray-100 p-2 py-2">
@@ -299,9 +308,11 @@ export default function PackageMob({ width }: PackageMT) {
                   .slice(0, visibleCount)
                   .map((item, i) => (
                     <PackageCard
+                      onClick={() => handleViewDetails(item.name, i, "tour")}
                       cardWidth={"w-93"}
                       data={item}
                       key={i}
+                      loading={i === loadingIndex ? true : false}
                       width={width}
                     ></PackageCard>
                   ))
@@ -309,10 +320,12 @@ export default function PackageMob({ width }: PackageMT) {
                   .slice(0, visibleCount)
                   .map((item, i) => (
                     <PackageDealCard
+                      onClick={() => handleViewDetails(item.name, i, "deal")}
                       cardWidth={"w-93"}
                       data={item}
                       key={i}
                       width={width}
+                      loading={i === loadingIndex ? true : false}
                     ></PackageDealCard>
                   ))
             : [...Array(6)].map((_, i) => (

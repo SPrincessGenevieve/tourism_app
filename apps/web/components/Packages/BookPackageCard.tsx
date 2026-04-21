@@ -1,7 +1,13 @@
 "use client"
 
 import { PackageDealT, PackageT } from "@/lib/types"
-import { IconBook, IconHeart, IconHeartFilled } from "@tabler/icons-react"
+import {
+  IconBook,
+  IconChevronDown,
+  IconChevronUp,
+  IconHeart,
+  IconHeartFilled,
+} from "@tabler/icons-react"
 import { Button } from "@workspace/ui/components/button"
 import { Calendar } from "@workspace/ui/components/calendar"
 import {
@@ -11,19 +17,19 @@ import {
 } from "@workspace/ui/components/dropdown-menu"
 import Input from "@workspace/ui/components/input"
 import React from "react"
+import { motion } from "motion/react"
+import CardSummary from "./CardSummary"
 
 type BookPackageCardProps = {
   item?: PackageT | PackageDealT
   date: Date | undefined
   setTravelDate: (date: Date | undefined) => void
-
   guest: number
   setGuest: (value: number) => void
-
   total: number
-
   isSaved: boolean
   setIsSaved: (value: boolean) => void
+  width: number
 }
 
 export default function BookPackageCard({
@@ -35,84 +41,66 @@ export default function BookPackageCard({
   total,
   isSaved,
   setIsSaved,
+  width,
 }: BookPackageCardProps) {
+  const [heightCard, setHeightCard] = React.useState<string | number>("")
+  const [collapse, setCollapses] = React.useState(false)
+
+  const handleHeight = () => {
+    setCollapses(!collapse)
+  }
+
+  React.useEffect(() => {
+    if (collapse) {
+      setHeightCard(0)
+    } else {
+      setHeightCard("auto")
+    }
+  })
+
   return (
-    <div className="relative h-full min-w-130 p-8">
-      <div className="fixed top-20 right-10 z-40 flex min-w-120 flex-col gap-4 rounded-2xl bg-white p-8 shadow-2xl shadow-primary-purple-100/30">
-        <div className="flex items-end">
-          <p className="text-2xl font-semibold text-blue-400">
-            ₱ {item?.price.toLocaleString()}
-          </p>
-          <p className="text-sm text-primary-gray-200/70">/person</p>
-        </div>
-        <div className="mt-4 flex flex-col gap-10">
-          <DropdownMenu>
-            <DropdownMenuTrigger className="flex h-10 w-full">
-              <Input
-                label="Select Travel Date"
-                containerClassName="w-full"
-                value={
-                  date
-                    ? date.toLocaleDateString("en-US", {
-                        month: "short",
-                        day: "numeric",
-                        year: "numeric",
-                      })
-                    : "Select date"
-                }
-              ></Input>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-full">
-              <Calendar
-                mode="single"
-                selected={date}
-                onSelect={setTravelDate}
-                className="rounded-lg border"
-                captionLayout="dropdown"
-              />
-            </DropdownMenuContent>
-          </DropdownMenu>
-          <Input
-            type="number"
-            value={guest}
-            onChange={(e) => setGuest(Number(e.target.value))}
-            label="Number of Travelers"
-            min={1}
-          ></Input>
-        </div>
-        <div className="w-full border-t border-primary-gray-200/30 py-4">
-          <div className="flex w-full justify-between">
-            <p>
-              ₱ {item?.price.toLocaleString()} x {guest}{" "}
-              {guest > 1 ? "people" : "person"}
+    <div
+      className={`relative h-full ${width > 1235 ? "min-w-100 p-8" : "w-0 min-w-0"} `}
+    >
+      <motion.div
+        animate={collapse ? { height: 180 } : { height: "auto" }}
+        transition={{ duration: 0.2, delay: 0.2 }}
+        className={`fixed ${width > 1235 ? "top-20" : "bottom-20"} right-10 z-40 flex min-w-100 flex-col gap-4 overflow-hidden rounded-2xl bg-white p-8 shadow-2xl shadow-primary-purple-100/30`}
+      >
+        <CardSummary
+          item={item}
+          date={date}
+          setTravelDate={setTravelDate}
+          guest={guest}
+          setGuest={setGuest}
+          total={total}
+          isSaved={isSaved}
+          setIsSaved={setIsSaved}
+          collapse={collapse}
+          heightCard={heightCard}
+        />
+        {width < 1235 && (
+          <div
+            onClick={handleHeight}
+            className="absolute bottom-2 left-0 z-20 flex w-full flex-col items-center justify-center"
+          >
+            <p className="text-sm text-gray-300">
+              {collapse ? "View more" : "View less"}
             </p>
-            <p className="text-right">₱ {total.toLocaleString()}</p>
+            {collapse ? (
+              <IconChevronDown
+                className="text-gray-300"
+                size={15}
+              ></IconChevronDown>
+            ) : (
+              <IconChevronUp
+                className="text-gray-300"
+                size={15}
+              ></IconChevronUp>
+            )}
           </div>
-          <div className="flex w-full justify-between">
-            <p className="text-xl font-semibold">Total</p>
-            <p className="text-left text-xl font-semibold text-blue-400">
-              ₱ {total.toLocaleString()}
-            </p>
-          </div>
-          <div className="mt-4 flex w-full flex-col gap-2">
-            <Button>
-              <IconBook></IconBook> Book Now
-            </Button>
-            <Button
-              onClick={() => setIsSaved(!isSaved)}
-              variant={isSaved ? "default" : "outline"}
-              className={`${isSaved ? "bg-orange-400" : ""}`}
-            >
-              {isSaved ? (
-                <IconHeartFilled className={`text-white`}></IconHeartFilled>
-              ) : (
-                <IconHeart></IconHeart>
-              )}
-              {isSaved ? "Saved" : "Save"} to Wishlist
-            </Button>
-          </div>
-        </div>
-      </div>
+        )}
+      </motion.div>
     </div>
   )
 }
