@@ -52,8 +52,12 @@ export default function FooterSection() {
   const hasAnimated = useRef(false)
 
   return (
-    <motion.div className="relative mt-20 flex h-auto min-h-80 w-full flex-col justify-center overflow-hidden">
-      <motion.div className="flex w-full flex-wrap items-start justify-between gap-10 p-4 px-4">
+    <motion.div
+      className={`relative mt-20 flex h-auto min-h-80 w-full flex-col justify-center overflow-hidden`}
+    >
+      <motion.div
+        className={`flex w-full flex-wrap items-start justify-between gap-10 p-8 px-8 max-sm:p-4`}
+      >
         <motion.div
           initial={
             hasAnimated.current
