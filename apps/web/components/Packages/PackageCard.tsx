@@ -12,6 +12,7 @@ import {
 import { Button } from "@workspace/ui/components/button"
 import { PackageT } from "@/lib/types"
 import { Spinner } from "@workspace/ui/components/spinner"
+import { useRouter } from "next/navigation"
 
 type PackageCardT = {
   data: PackageT
@@ -28,6 +29,12 @@ export default function PackageCard({
   onClick,
   loading = false,
 }: PackageCardT) {
+  const router = useRouter()
+
+  const handleNav = (name: string) => {
+    router.push(`packages/tour/${name}`)
+  }
+
   return (
     <div
       className={`relative flex flex-col overflow-hidden pb-12 ${width > 455 ? cardWidth : "w-full"} min-h-50 rounded-xl border bg-white shadow-xl shadow-primary-blue-400/30`}
@@ -115,7 +122,7 @@ export default function PackageCard({
             </div>
           </div>
           <div className="h-full">
-            <Button onClick={onClick} className="h-10">
+            <Button onClick={() => handleNav(data.name)} className="h-10">
               {loading && <Spinner className="text-white"></Spinner>} View
               Details
             </Button>
