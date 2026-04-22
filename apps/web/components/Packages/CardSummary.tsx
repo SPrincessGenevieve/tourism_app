@@ -15,7 +15,7 @@ import { PackageDealT, PackageT } from "@/lib/types"
 import { useRouter } from "next/navigation"
 
 type CardSummaryProps = {
-  item: PackageT | PackageDealT
+  item: PackageT | PackageDealT | undefined
   date: Date | undefined
   setTravelDate: (date: Date | undefined) => void
   guest: number
@@ -128,7 +128,7 @@ export default function CardSummary({
           className="mt-4 flex w-full flex-col gap-2 overflow-hidden"
         >
           <Button
-            onClick={() => handleReviewCheckout(item?.id)}
+            onClick={() => handleReviewCheckout(item?.id ?? 0)}
             className="w-full"
           >
             <IconBook /> Book Now
