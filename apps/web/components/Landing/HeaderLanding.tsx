@@ -13,8 +13,6 @@ export default function HeaderLanding() {
   const pathFilter = path.replace("", "home")
   const page = pathFilter.split("/")[1]
 
-  console.log("PATH: ", page)
-
   const handleNav = (href: string) => {
     router.push(href)
   }
@@ -30,7 +28,6 @@ export default function HeaderLanding() {
       <div className="z-40 flex items-center">
         {pages.map((item, i) => {
           const tab = item.label.toLocaleLowerCase()
-          console.log("TABS: ", tab)
           return (
             <Button
               onClick={() => handleNav(item.link)}

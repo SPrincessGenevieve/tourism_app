@@ -13,7 +13,6 @@ export default function PackageDealDetails() {
   const type = pathName.split("/")[2]
   const name = pathName.split("/")[3]?.replaceAll("%20", " ")
   const [width, setWidth] = React.useState<number>(0)
-
   React.useEffect(() => {
     setWidth(window.innerWidth)
     const handleResize = () => {

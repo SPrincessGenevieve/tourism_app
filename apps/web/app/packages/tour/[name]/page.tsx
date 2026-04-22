@@ -32,6 +32,8 @@ export default function PackageTourDetails() {
       : LimitedDeal.find((item) => item.name === name)
   ) as PackageT | PackageDealT | undefined
 
+  console.log("DATA: ", data)
+
   return (
     <div className="min-h-screen w-full">
       <PackageDetailHeader item={data}></PackageDetailHeader>

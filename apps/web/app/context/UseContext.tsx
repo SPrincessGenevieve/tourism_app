@@ -23,7 +23,7 @@ type UserContextType = {
 
 const defaultUserContext: UserContextType = {
   token: "",
-  typePackage: "",
+  typePackage: "tour",
   sidebar: {
     opacity: 0,
     y: `-100%`,
