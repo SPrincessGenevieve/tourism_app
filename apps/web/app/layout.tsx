@@ -6,6 +6,7 @@ import { cn } from "@workspace/ui/lib/utils"
 import { UserProvider } from "./context/UseContext"
 import SidebarContent from "@/components/Landing/SidebarContent"
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" })
 
@@ -34,6 +35,7 @@ export default function RootLayout({
         <ThemeProvider>
           <UserProvider>
             <Analytics></Analytics>
+            <SpeedInsights></SpeedInsights>
             <SidebarContent></SidebarContent>
             {children}
           </UserProvider>
