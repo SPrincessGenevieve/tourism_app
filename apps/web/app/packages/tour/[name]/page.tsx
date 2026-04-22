@@ -7,10 +7,11 @@ import HeaderPackages from "@/components/Packages/HeaderPackages"
 import PackageDetailHeader from "@/components/Landing/Package/PackageDetailHeader"
 import { PackageT, PackageDealT } from "@/lib/types"
 import IterinarySection from "@/components/Packages/IterinarySection"
+import { useUserContext } from "@/app/context/UseContext"
 
 export default function PackageTourDetails() {
+  const { typePackage } = useUserContext()
   const pathName = usePathname()
-  const type = pathName.split("/")[2]
   const name = pathName.split("/")[3]?.replaceAll("%20", " ")
   const [width, setWidth] = React.useState<number>(0)
 
@@ -26,7 +27,7 @@ export default function PackageTourDetails() {
   }, [])
 
   const data = (
-    type === "tour"
+    typePackage === "tour"
       ? Packages.find((item) => item.name === name)
       : LimitedDeal.find((item) => item.name === name)
   ) as PackageT | PackageDealT | undefined
@@ -34,7 +35,11 @@ export default function PackageTourDetails() {
   return (
     <div className="min-h-screen w-full">
       <PackageDetailHeader item={data}></PackageDetailHeader>
-      <IterinarySection width={width} item={data}></IterinarySection>
+      <IterinarySection
+        type={typePackage}
+        width={width}
+        item={data}
+      ></IterinarySection>
     </div>
   )
 }

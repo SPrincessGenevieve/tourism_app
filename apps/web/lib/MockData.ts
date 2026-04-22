@@ -918,7 +918,7 @@ export const Packages: PackageT[] = [
         day: 6,
         activities: ["Island hopping private tour"],
         images: [
-          "https://cdn.thecrazytourist.com/wp-content/uploads/2017/10/Island-Hopping-1024x768.jpg",
+          "https://gttp.images.tshiftcdn.com/219065/x/0/island-hopping-in-sta-cruz-island.jpg?ar=1.91:1&w=1200&fit=crop",
         ],
         description:
           "Embark on an <strong>Island hopping private tour</strong> to discover the surrounding islets. From the sandbars of Little Santa Cruz Island to the thriving mangrove forests, your private guide will lead you to the best spots for <i>snorkeling and bird watching</i>. The biodiversity in these protected waters is truly world-class.",

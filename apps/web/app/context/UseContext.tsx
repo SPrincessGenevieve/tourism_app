@@ -13,6 +13,7 @@ type UserContextType = {
   token: string
   sidebar: sidebarT
   width: number
+  typePackage: string
   setUserDetails: (
     details:
       | Partial<UserContextType>
@@ -22,6 +23,7 @@ type UserContextType = {
 
 const defaultUserContext: UserContextType = {
   token: "",
+  typePackage: "",
   sidebar: {
     opacity: 0,
     y: `-100%`,

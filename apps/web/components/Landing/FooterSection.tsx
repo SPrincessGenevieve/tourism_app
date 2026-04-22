@@ -53,7 +53,7 @@ export default function FooterSection() {
 
   return (
     <motion.div className="relative mt-20 flex h-auto min-h-80 w-full flex-col justify-center overflow-hidden">
-      <motion.div className="flex w-full flex-wrap items-start justify-between gap-10 p-4 px-10">
+      <motion.div className="flex w-full flex-wrap items-start justify-between gap-10 p-4 px-8">
         <motion.div
           initial={
             hasAnimated.current

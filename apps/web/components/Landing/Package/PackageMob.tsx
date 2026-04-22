@@ -301,7 +301,7 @@ export default function PackageMob({ width }: PackageMT) {
         </Drawer>
       </div>
       <div>
-        <div className="flex w-full flex-wrap justify-center gap-8">
+        <div className="flex w-full flex-wrap justify-center gap-8 p-4">
           {loadData
             ? activeTab === "all"
               ? filteredPackages

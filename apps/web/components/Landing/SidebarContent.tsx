@@ -6,8 +6,10 @@ import { useUserContext } from "@/app/context/UseContext"
 import { Button } from "@workspace/ui/components/button"
 import { IconX } from "@tabler/icons-react"
 import { pages } from "@/lib/pages"
+import { useRouter } from "next/navigation"
 
 export default function SidebarContent() {
+  const router = useRouter()
   const { sidebar, setUserDetails } = useUserContext()
   const [open, setOpen] = React.useState<{
     opacity: number
@@ -37,6 +39,13 @@ export default function SidebarContent() {
     })
   }
 
+  const handleNav = (href: string) => {
+    router.push(href)
+    setTimeout(() => {
+      handleClose()
+    }, 300)
+  }
+
   return (
     <motion.div
       animate={{ y: open.y, opacity: open.opacity }}
@@ -55,6 +64,7 @@ export default function SidebarContent() {
       <div className="mt-20 flex w-full flex-col items-center justify-center gap-4">
         {pages.map((item, i) => (
           <div
+            onClick={() => handleNav(item.link)}
             key={i}
             className="cursor-pointer border-b-2 border-transparent px-4 transition duration-200 ease-in-out hover:border-primary-purple-100"
           >

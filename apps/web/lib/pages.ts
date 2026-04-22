@@ -5,12 +5,12 @@ export const pages = [
   },
   {
     link: "/packages",
-    label: "Package",
+    label: "Packages",
   },
-  {
-    link: "",
-    label: "Special Deals",
-  },
+  // {
+  //   link: "",
+  //   label: "Special Deals",
+  // },
   {
     link: "/sign-in",
     label: "Login",

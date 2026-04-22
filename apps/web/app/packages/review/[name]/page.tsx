@@ -1,10 +1,11 @@
 "use client"
 
+import { useUserContext } from "@/app/context/UseContext"
 import DateField from "@/components/DateField"
 import ReviewForm from "@/components/Landing/Review/ReviewForm"
 import ReviewHeader from "@/components/Landing/Review/ReviewHeader"
 import CardSummary from "@/components/Packages/CardSummary"
-import { Packages } from "@/lib/MockData"
+import { LimitedDeal, Packages } from "@/lib/MockData"
 import {
   IconCalendar,
   IconPlus,
@@ -24,10 +25,14 @@ export type TravelerT = {
 }
 
 export default function ReviewCheckout() {
+  const { typePackage } = useUserContext()
   const router = useRouter()
   const pathName = usePathname()
   const name = pathName.split("/")[3]?.replaceAll("%20", " ")
-  const data = Packages.find((item) => item.name === name)
+
+  const data = (typePackage === "tour" ? Packages : LimitedDeal).find(
+    (item) => item.name === name
+  )
 
   if (!data) {
     return <div>Package not found</div>
@@ -112,10 +117,10 @@ export default function ReviewCheckout() {
               {/* BOOKER */}
               <div className="rounded-2xl border border-blue-700 bg-blue-100 p-4">
                 <p className="text-blue-800">
-                  <strong>Payment Instructions: </strong>Upon submission, you
-                  will receive an email with payment details and bank account
-                  information. Please complete the payment within 24 hours to
-                  confirm your booking.
+                  <strong>Quick Tip: </strong>To lock in your preferred dates
+                  and current rates, keep an eye on your inbox! We'll send your
+                  booking details and next steps right after you hit submit so
+                  you can get one step closer to your adventure.
                 </p>
               </div>
               <div>

@@ -25,7 +25,7 @@ export default function PackageReview({
   item: PackageT | PackageDealT
 }) {
   const [activeImage, setActiveImage] = React.useState<string | null>(null)
-
+  console.log("ITEMs: ", item.reviews)
   return (
     <div className="mb-8 flex flex-col gap-4">
       <div
@@ -59,8 +59,8 @@ export default function PackageReview({
           </div>
         </div>
       </div>
-      <div className="relative min-h-50 w-full columns-1 gap-4 [column-gap:1rem] rounded-2xl border-2 border-gray-100 p-4 sm:columns-2 lg:columns-3">
-        {item.reviews?.length === 0 && (
+      {item.reviews?.length === 0 ? (
+        <div className="relative min-h-50 w-full gap-4 rounded-2xl border-2 border-gray-100 bg-[red] p-4">
           <div className="absolute top-0 flex h-full w-full flex-col items-center justify-center gap-2">
             <IconMessage2 size={40}></IconMessage2>
             <div className="kic flex flex-col items-center">
@@ -68,51 +68,55 @@ export default function PackageReview({
               <p className="text-gray-700">Check back later for updates.</p>
             </div>
           </div>
-        )}
-        {item.reviews?.map((review, i) => (
-          <div
-            key={i}
-            className="mb-4 break-inside-avoid rounded-2xl border bg-primary-purple-100/5 p-4"
-          >
-            <div className="flex items-start justify-between">
-              <div className="flex items-center gap-4">
-                <Avatar>
-                  <AvatarImage src={review.media[0]}></AvatarImage>
-                  <AvatarFallback>
-                    <IconUser></IconUser>
-                  </AvatarFallback>
-                </Avatar>
-                <div>
-                  <p className="text-sm font-semibold">Johnny Doe</p>
-                  <p className="text-[12px] font-light">2 weeks ago</p>
+        </div>
+      ) : (
+        <div className="relative min-h-50 w-full columns-1 gap-4 [column-gap:1rem] rounded-2xl border-2 border-gray-100 p-4 sm:columns-2 lg:columns-3">
+          {item.reviews?.map((review, i) => (
+            <div
+              key={i}
+              className="mb-4 break-inside-avoid rounded-2xl border bg-primary-purple-100/5 p-4"
+            >
+              <div className="flex items-start justify-between">
+                <div className="flex items-center gap-4">
+                  <Avatar>
+                    <AvatarImage src={review.media[0]}></AvatarImage>
+                    <AvatarFallback>
+                      <IconUser></IconUser>
+                    </AvatarFallback>
+                  </Avatar>
+                  <div>
+                    <p className="text-sm font-semibold">Johnny Doe</p>
+                    <p className="text-[12px] font-light">2 weeks ago</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <IconStarFilled size={15} key={i}></IconStarFilled>
+                  ))}
                 </div>
               </div>
-              <div className="flex items-center">
-                {[...Array(review.rating)].map((_, i) => (
-                  <IconStarFilled size={15} key={i}></IconStarFilled>
-                ))}
+              <div className="my-4 flex flex-col gap-4">
+                <p>{review.comment}</p>
+                <div className="flex gap-2">
+                  {review.media.map((rev2, i) => (
+                    <div key={i}>
+                      <Image
+                        src={rev2}
+                        alt={rev2}
+                        width={400}
+                        height={400}
+                        onClick={() => setActiveImage(rev2)} // ✅ ADD THIS
+                        className="h-40 w-40 cursor-pointer rounded-2xl object-cover transition hover:scale-105"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-            <div className="my-4 flex flex-col gap-4">
-              <p>{review.comment}</p>
-              <div className="flex gap-2">
-                {review.media.map((rev2, i) => (
-                  <div key={i}>
-                    <Image
-                      src={rev2}
-                      alt={rev2}
-                      width={400}
-                      height={400}
-                      onClick={() => setActiveImage(rev2)} // ✅ ADD THIS
-                      className="h-40 w-40 cursor-pointer rounded-2xl object-cover transition hover:scale-105"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
+
       <AnimatePresence>
         {activeImage && (
           <motion.div

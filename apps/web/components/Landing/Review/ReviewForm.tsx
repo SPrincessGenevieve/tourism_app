@@ -1,12 +1,12 @@
 import { IconCalendar, IconUser } from "@tabler/icons-react"
 import { Button } from "@workspace/ui/components/button"
 import React from "react"
-import { PackageT } from "@/lib/types"
+import { PackageT, PackageDealT } from "@/lib/types"
 import { TravelerT } from "@/app/packages/review/[name]/page"
 
 type ReviewFormT = {
   handleBooking: () => void
-  data: PackageT
+  data: PackageT | PackageDealT
   total: number
   packageTotal: number
   travelers: TravelerT[]

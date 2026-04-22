@@ -12,6 +12,7 @@ import { IconBolt, IconBook, IconPackage } from "@tabler/icons-react"
 import PackageDealCard from "@/components/Packages/PackageDealCard"
 import { Skeleton } from "@workspace/ui/components/skeleton"
 import { useRouter } from "next/navigation"
+import { useUserContext } from "@/app/context/UseContext"
 
 type PackageWT = {
   width: number
@@ -19,8 +20,10 @@ type PackageWT = {
 
 export default function PackageWeb({ width }: PackageWT) {
   const router = useRouter()
+  const { typePackage, setUserDetails } = useUserContext()
   const [range, setRange] = useState([2000, 50000])
-  const [activeTab, setActiveTab] = useState("all")
+  const [activeTab, setActiveTab] = useState(typePackage)
+
   const [visibleCount, setVisibleCount] = useState(6)
   const [visibleCountDeal, setVisibleCountDeal] = useState(6)
   const [loadData, setLoadData] = useState(false)
@@ -28,6 +31,16 @@ export default function PackageWeb({ width }: PackageWT) {
 
   const [selectedDurations, setSelectedDurations] = useState<string[]>([])
   const [selectedLocations, setSelectedLocations] = useState<string[]>([])
+
+  useEffect(() => {
+    if (activeTab === "") {
+      setActiveTab(typePackage)
+    } else {
+      setUserDetails({
+        typePackage: activeTab,
+      })
+    }
+  }, [activeTab, typePackage])
 
   const [appliedFilters, setAppliedFilters] = useState({
     range: [2000, 50000] as [number, number],
@@ -81,7 +94,7 @@ export default function PackageWeb({ width }: PackageWT) {
   ]
 
   const handleLoadMore = () => {
-    if (activeTab === "all") {
+    if (activeTab === "tour") {
       setVisibleCount((prev) => prev + 6)
     } else {
       setVisibleCountDeal((prev) => prev + 6)
@@ -146,13 +159,16 @@ export default function PackageWeb({ width }: PackageWT) {
   }, [])
 
   const isEmpty =
-    activeTab === "all"
+    activeTab === "tour"
       ? filteredPackages.length === 0
       : filteredDeals.length === 0
 
   const handleViewDetails = (name: string, index: number, tab: string) => {
     setLoadingIndex(index)
     router.push(`/packages/${tab === "tour" ? "tour" : "deals"}/${name}`)
+    setUserDetails({
+      typePackage: tab,
+    })
   }
 
   return (
@@ -164,17 +180,17 @@ export default function PackageWeb({ width }: PackageWT) {
         </div>
         <div className="flex w-full items-center justify-center gap-2">
           <Button
-            onClick={() => setActiveTab("all")}
+            onClick={() => setActiveTab("tour")}
             className="w-1/2"
-            variant={activeTab === "all" ? "default" : "outline"}
+            variant={activeTab === "tour" ? "default" : "outline"}
           >
             <IconBook></IconBook>
             All Tours
           </Button>
           <Button
-            onClick={() => setActiveTab("limit")}
+            onClick={() => setActiveTab("deals")}
             className="w-1/2"
-            variant={activeTab === "limit" ? "default" : "outline"}
+            variant={activeTab === "deals" ? "default" : "outline"}
           >
             <IconBolt></IconBolt>
             Limited Deals
@@ -265,7 +281,7 @@ export default function PackageWeb({ width }: PackageWT) {
 
               <div className="flex flex-col gap-1">
                 <p className="text-center text-sm font-medium">
-                  No {activeTab === "all" ? "tours" : "deals"} found
+                  No {activeTab === "tour" ? "tours" : "deals"} found
                 </p>
 
                 <p className="text-center text-xs text-gray-500">
@@ -284,7 +300,7 @@ export default function PackageWeb({ width }: PackageWT) {
             </div>
           )}
           {loadData
-            ? activeTab === "all"
+            ? activeTab === "tour"
               ? filteredPackages
                   .slice(0, visibleCount)
                   .map((item, i) => (
@@ -316,7 +332,7 @@ export default function PackageWeb({ width }: PackageWT) {
                 ></Skeleton>
               ))}
         </div>
-        {activeTab === "all"
+        {activeTab === "tour"
           ? visibleCount < filteredPackages.length && (
               <div className="mt-8 flex w-full items-center justify-center">
                 <Button

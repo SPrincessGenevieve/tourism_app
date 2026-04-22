@@ -31,7 +31,9 @@ import CardSummary from "./CardSummary"
 export default function IterinarySection({
   item,
   width,
+  type,
 }: {
+  type: string
   width: number
   item: PackageT | PackageDealT | undefined
 }) {
@@ -71,11 +73,13 @@ export default function IterinarySection({
           >
             <PackageExclusion item={item!}></PackageExclusion>
           </div>
-          <div
-            className={`items-center border-t-2 border-primary-gray-200/10 py-8 ${width > 640 ? "p-8" : "p-2"}`}
-          >
-            <PackageReview width={width} item={item!}></PackageReview>
-          </div>
+          {type !== "deals" && (
+            <div
+              className={`items-center border-t-2 border-primary-gray-200/10 py-8 ${width > 640 ? "p-8" : "p-2"}`}
+            >
+              <PackageReview width={width} item={item!}></PackageReview>
+            </div>
+          )}
         </div>
       </div>
       {width > 870 ? (

@@ -65,7 +65,7 @@ export default function BookPackageCard({
       <motion.div
         animate={collapse ? { height: 180 } : { height: "auto" }}
         transition={{ duration: 0.2, delay: 0.2 }}
-        className={`fixed ${width > 1235 ? "top-20" : "bottom-20"} right-10 z-40 flex min-w-100 flex-col gap-4 overflow-hidden rounded-2xl bg-white p-8 shadow-2xl shadow-primary-purple-100/30`}
+        className={`fixed ${width > 1235 ? "top-20" : "bottom-20"} right-10 z-40 flex min-w-100 flex-col gap-4 overflow-hidden rounded-2xl bg-white p-8 shadow-[0_0_10px_2px] shadow-black/30`}
       >
         <CardSummary
           item={item}

@@ -1,12 +1,9 @@
 "use client"
-import { AnimatePresence, motion } from "motion/react"
+import { motion } from "motion/react"
 import React from "react"
 import HeaderLanding from "./Landing/HeaderLanding"
 import Logo from "@workspace/ui/components/logo"
 import MobileSidebar from "./Landing/MobileSidebar"
-import { HeroPackage } from "@/lib/MockData"
-import { Button } from "@workspace/ui/components/button"
-import { ArrowRight } from "lucide-react"
 
 type Sidebar = {
   containerWidth: number
