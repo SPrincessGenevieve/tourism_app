@@ -15,7 +15,7 @@ import { PackageDealT, PackageT } from "@/lib/types"
 import { useRouter } from "next/navigation"
 
 type CardSummaryProps = {
-  item?: PackageT | PackageDealT
+  item: PackageT | PackageDealT
   date: Date | undefined
   setTravelDate: (date: Date | undefined) => void
   guest: number
@@ -48,10 +48,10 @@ export default function CardSummary({
     : "Select date"
 
   const router = useRouter()
-  const handleReviewCheckout = (name: string) => {
-    router.push(`/packages/review/${name}`)
-  }
 
+  const handleReviewCheckout = (id: number) => {
+    router.push(`/packages/review-package/${id}`)
+  }
   return (
     <motion.div className="flex flex-col gap-2">
       {/* PRICE */}
@@ -128,7 +128,7 @@ export default function CardSummary({
           className="mt-4 flex w-full flex-col gap-2 overflow-hidden"
         >
           <Button
-            onClick={() => handleReviewCheckout(item?.name!)}
+            onClick={() => handleReviewCheckout(item?.id)}
             className="w-full"
           >
             <IconBook /> Book Now

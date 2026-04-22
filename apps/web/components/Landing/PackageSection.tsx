@@ -27,7 +27,7 @@ export default function PackageSection() {
   }
 
   return (
-    <div className="flex min-h-screen w-full flex-col items-center gap-8 p-8">
+    <div className="flex min-h-screen w-full flex-col items-center gap-8">
       <SectionTitle
         title={"Featured Tour Packages"}
         desc={"Handpicked destinations for your perfect gateway"}

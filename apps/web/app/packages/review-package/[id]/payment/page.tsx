@@ -5,7 +5,7 @@ import Image from "next/image"
 import { useRouter } from "next/navigation"
 import React, { useState, useEffect } from "react"
 
-export default function PaymentMethod() {
+export default function PaymentPage() {
   const router = useRouter()
   const [width, setWidth] = useState<number>(0)
 

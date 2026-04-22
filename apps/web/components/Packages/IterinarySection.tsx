@@ -48,11 +48,11 @@ export default function IterinarySection({
 
   return (
     <div
-      className={`flex ${width > 870 ? "" : "flex-col"} min-h-screen w-full gap-2 bg-white`}
+      className={`flex ${width > 1320 ? "" : "flex-col"} min-h-screen w-full gap-2 bg-white`}
     >
       <div className="w-full">
         <div
-          className={`flex min-h-screen w-full flex-col justify-evenly ${width > 640 ? "p-8" : "p-2"}`}
+          className={`flex min-h-screen flex-col justify-evenly ${width > 745 ? "w-full p-20" : "w-full p-2"}`}
         >
           <div className="flex justify-center border-t-2 border-primary-gray-200/10 py-8">
             <Travelterinary
@@ -82,7 +82,7 @@ export default function IterinarySection({
           )}
         </div>
       </div>
-      {width > 870 ? (
+      {width > 1320 ? (
         <BookPackageCard
           date={travelDate}
           setTravelDate={setTravelDate}

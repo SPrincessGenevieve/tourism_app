@@ -102,7 +102,7 @@ export default function ReviewCheckout() {
   const total = packageTotal + service_fee - discounts
 
   const handleBooking = () => {
-    router.push(`/packages/review/${name}/${data.id}`)
+    router.push(`/packages/review-package/${data.id}/payment`)
   }
   return (
     <div className="min-h-screen w-full bg-white">

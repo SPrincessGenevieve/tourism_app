@@ -11,7 +11,7 @@ export default function SectionTitle({ title, desc }: SectionT) {
   const hasAnimated = useRef(false)
 
   return (
-    <div className="my-8 flex w-full flex-col items-center justify-center">
+    <div className="my-8 flex w-full flex-col items-center justify-center p-8">
       <motion.p
         initial={
           hasAnimated.current ? { y: 1, opacity: 1 } : { y: -20, opacity: 0 }

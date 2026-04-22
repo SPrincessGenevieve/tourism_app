@@ -51,7 +51,7 @@ export default function DestinationSection() {
   }
 
   return (
-    <div className="relative flex min-h-screen w-full items-center justify-center p-8">
+    <div className="relative flex min-h-screen w-full items-center justify-center">
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <svg

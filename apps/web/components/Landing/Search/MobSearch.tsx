@@ -29,7 +29,7 @@ export default function MobSearch() {
 
   return (
     <div className="relative flex min-h-screen w-full flex-col items-center justify-center p-8">
-      <div className="z-20 flex h-full w-full flex-col items-center justify-center p-8">
+      <div className="z-20 flex h-full w-full flex-col items-center justify-center">
         <div className="flex w-full flex-col items-center justify-center gap-4">
           <motion.p
             initial={

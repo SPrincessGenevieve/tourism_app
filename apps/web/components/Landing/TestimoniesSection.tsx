@@ -42,7 +42,7 @@ export default function TestimoniesSection() {
 
   return (
     <div
-      className={`relative flex min-h-screen w-full flex-col justify-center py-20`}
+      className={`relative flex min-h-screen w-full flex-col justify-center`}
     >
       <div
         className="absolute h-screen w-full"
@@ -73,7 +73,7 @@ export default function TestimoniesSection() {
             bounce: 0.4,
           }}
           viewport={{ once: true }}
-          className="flex w-full flex-wrap justify-center gap-8"
+          className="flex w-full flex-wrap justify-center gap-8 p-4"
         >
           {rating.map((item, i) => (
             <motion.div
@@ -139,7 +139,7 @@ export default function TestimoniesSection() {
           stiffness: 70,
           bounce: 90,
         }}
-        className={`absolute bottom-50 z-10 w-full overflow-hidden max-[670px]:relative max-[670px]:bottom-0`}
+        className={`absolute bottom-50 left-0 z-10 w-full overflow-hidden max-[670px]:relative max-[670px]:bottom-0`}
         style={{
           WebkitMaskImage:
             "linear-gradient(to top, transparent, black 15%, black 60%, transparent)",

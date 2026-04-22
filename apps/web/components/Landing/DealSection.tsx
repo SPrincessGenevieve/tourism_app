@@ -45,7 +45,7 @@ export default function DealSection() {
   const hasAnimated = useRef(false)
 
   return (
-    <div className="z-30 flex h-auto w-full flex-col items-center justify-center p-8">
+    <div className="z-30 flex h-auto w-full flex-col items-center justify-center">
       <div className="flex">
         <motion.div
           animate={{
@@ -71,7 +71,7 @@ export default function DealSection() {
         desc={"Don't miss out on these amazing discounts!"}
       ></SectionTitle>
 
-      <div className="flex w-full flex-wrap items-center justify-evenly gap-8">
+      <div className="flex w-full flex-wrap items-center justify-evenly gap-8 p-4">
         {data.map((item, i) => (
           <AnimatePresence key={i}>
             <motion.div
@@ -82,7 +82,7 @@ export default function DealSection() {
               }
               viewport={{ once: true }}
               whileInView={{ scale: 1, opacity: 1 }}
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 90, bounce: 20 }}
               className={`relative flex min-h-130 w-full max-w-100 min-w-80 flex-col items-center justify-start overflow-hidden rounded-3xl bg-linear-0 py-20 ${i === 2 ? "from-yellow-900 via-yellow-100" : i === 1 ? "from-green-200 via-blue-100" : "from-blue-900 via-cyan-100"} to-white p-8`}
             >

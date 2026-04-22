@@ -2,7 +2,7 @@ import { IconCalendar, IconUser } from "@tabler/icons-react"
 import { Button } from "@workspace/ui/components/button"
 import React from "react"
 import { PackageT, PackageDealT } from "@/lib/types"
-import { TravelerT } from "@/app/packages/review/[name]/page"
+import { TravelerT } from "@/app/packages/review-package/[id]/page"
 
 type ReviewFormT = {
   handleBooking: () => void
