@@ -1,6 +1,6 @@
 "use client"
 
-import { sidebarT } from "@/lib/types"
+import { PackageDealT, PackageT, sidebarT } from "@/lib/types"
 import {
   createContext,
   useState,
@@ -14,6 +14,8 @@ type UserContextType = {
   sidebar: sidebarT
   width: number
   typePackage: string
+  tourPackages: PackageT[]
+  dealsPackages: PackageDealT[]
   setUserDetails: (
     details:
       | Partial<UserContextType>
@@ -23,6 +25,8 @@ type UserContextType = {
 
 const defaultUserContext: UserContextType = {
   token: "",
+  tourPackages: [],
+  dealsPackages: [],
   typePackage: "tour",
   sidebar: {
     opacity: 0,

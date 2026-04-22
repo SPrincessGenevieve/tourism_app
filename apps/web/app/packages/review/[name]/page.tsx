@@ -14,7 +14,7 @@ import {
 } from "@tabler/icons-react"
 import { Button } from "@workspace/ui/components/button"
 import Input from "@workspace/ui/components/input"
-import { usePathname, useRouter } from "next/navigation"
+import { useParams, usePathname, useRouter } from "next/navigation"
 import React, { useState, useEffect } from "react"
 
 export type TravelerT = {
@@ -28,10 +28,12 @@ export default function ReviewCheckout() {
   const { typePackage } = useUserContext()
   const router = useRouter()
   const pathName = usePathname()
+  const params = useParams()
   const name = pathName.split("/")[3]?.replaceAll("%20", " ")
+  const id = Number(params.id)
 
   const data = (typePackage === "tour" ? Packages : LimitedDeal).find(
-    (item) => item.name === name
+    (item) => item.id === id
   )
 
   if (!data) {

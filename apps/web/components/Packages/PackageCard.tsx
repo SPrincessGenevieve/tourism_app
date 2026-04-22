@@ -31,8 +31,8 @@ export default function PackageCard({
 }: PackageCardT) {
   const router = useRouter()
 
-  const handleNav = (name: string) => {
-    router.push(`packages/tour/${name}`)
+  const handleNav = (id: number) => {
+    router.push(`packages/tour-details/${id}`)
   }
 
   return (
@@ -122,7 +122,7 @@ export default function PackageCard({
             </div>
           </div>
           <div className="h-full">
-            <Button onClick={() => handleNav(data.name)} className="h-10">
+            <Button onClick={() => handleNav(data.id)} className="h-10">
               {loading && <Spinner className="text-white"></Spinner>} View
               Details
             </Button>

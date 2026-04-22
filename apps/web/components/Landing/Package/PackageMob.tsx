@@ -181,9 +181,9 @@ export default function PackageMob({ width }: PackageMT) {
       ? filteredPackages.length === 0
       : filteredDeals.length === 0
 
-  const handleViewDetails = (name: string, index: number, tab: string) => {
+  const handleViewDetails = (id: number, index: number, tab: string) => {
     setLoadingIndex(index)
-    router.push(`/packages/${tab === "tour" ? "tour" : "deals"}/${name}`)
+    router.push(`/packages/${tab === "tour" ? "tour" : "deals"}/${id}`)
   }
 
   return (
@@ -308,7 +308,7 @@ export default function PackageMob({ width }: PackageMT) {
                   .slice(0, visibleCount)
                   .map((item, i) => (
                     <PackageCard
-                      onClick={() => handleViewDetails(item.name, i, "tour")}
+                      onClick={() => handleViewDetails(item.id, i, "tour")}
                       cardWidth={"w-93"}
                       data={item}
                       key={i}
@@ -320,7 +320,7 @@ export default function PackageMob({ width }: PackageMT) {
                   .slice(0, visibleCount)
                   .map((item, i) => (
                     <PackageDealCard
-                      onClick={() => handleViewDetails(item.name, i, "deal")}
+                      onClick={() => handleViewDetails(item.id, i, "deal")}
                       cardWidth={"w-93"}
                       data={item}
                       key={i}

@@ -5,7 +5,7 @@ import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
 import { Label } from "@workspace/ui/components/label"
 import { Slider } from "@workspace/ui/components/slider"
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useMemo } from "react"
 import { FilterIcon } from "lucide-react"
 import { LimitedDeal, Packages } from "@/lib/MockData"
 import { IconBolt, IconBook, IconPackage } from "@tabler/icons-react"
@@ -18,10 +18,36 @@ type PackageWT = {
   width: number
 }
 
+const defaultFilters = {
+  range: [2000, 50000] as [number, number],
+  durations: [] as string[],
+  locations: [] as string[],
+}
+
+function filterPackages<
+  T extends { price: number; duration: string; provinceCity: string },
+>(list: T[], filters: typeof defaultFilters) {
+  return list.filter((item) => {
+    if (item.price < filters.range[0] || item.price > filters.range[1])
+      return false
+    if (filters.durations.length && !filters.durations.includes(item.duration))
+      return false
+    if (
+      filters.locations.length &&
+      !filters.locations.includes(item.provinceCity)
+    )
+      return false
+    return true
+  })
+}
+
+const toggleValue = (list: string[], value: string) =>
+  list.includes(value) ? list.filter((v) => v !== value) : [...list, value]
+
 export default function PackageWeb({ width }: PackageWT) {
   const router = useRouter()
   const { typePackage, setUserDetails } = useUserContext()
-  const [range, setRange] = useState([2000, 50000])
+
   const [activeTab, setActiveTab] = useState(typePackage)
 
   const [visibleCount, setVisibleCount] = useState(6)
@@ -29,8 +55,8 @@ export default function PackageWeb({ width }: PackageWT) {
   const [loadData, setLoadData] = useState(false)
   const [loadingIndex, setLoadingIndex] = useState<number | null>(null)
 
-  const [selectedDurations, setSelectedDurations] = useState<string[]>([])
-  const [selectedLocations, setSelectedLocations] = useState<string[]>([])
+  const [filters, setFilters] = useState(defaultFilters)
+  const [draftFilters, setDraftFilters] = useState(defaultFilters)
 
   useEffect(() => {
     if (activeTab === "") {
@@ -41,43 +67,6 @@ export default function PackageWeb({ width }: PackageWT) {
       })
     }
   }, [activeTab, typePackage])
-
-  const [appliedFilters, setAppliedFilters] = useState({
-    range: [2000, 50000] as [number, number],
-    durations: [] as string[],
-    locations: [] as string[],
-  })
-
-  const isFiltered =
-    appliedFilters.durations.length > 0 ||
-    appliedFilters.locations.length > 0 ||
-    appliedFilters.range[0] !== 2000 ||
-    appliedFilters.range[1] !== 50000
-
-  const isChanged =
-    range[0] !== appliedFilters.range[0] ||
-    range[1] !== appliedFilters.range[1] ||
-    selectedDurations.length !== appliedFilters.durations.length ||
-    selectedLocations.length !== appliedFilters.locations.length ||
-    !selectedDurations.every((d) => appliedFilters.durations.includes(d)) ||
-    !selectedLocations.every((l) => appliedFilters.locations.includes(l))
-
-  const handleResetFilters = () => {
-    const defaultRange: [number, number] = [2000, 150000]
-
-    setRange(defaultRange)
-    setSelectedDurations([])
-    setSelectedLocations([])
-
-    setAppliedFilters({
-      range: defaultRange,
-      durations: [],
-      locations: [],
-    })
-
-    setVisibleCount(6)
-    setVisibleCountDeal(6)
-  }
 
   const locations = [
     ...new Set(
@@ -93,6 +82,16 @@ export default function PackageWeb({ width }: PackageWT) {
     ),
   ]
 
+  const filteredPackages = useMemo(() => {
+    return filterPackages(Packages, filters)
+  }, [filters])
+
+  const filteredDeals = useMemo(() => {
+    return filterPackages(LimitedDeal, filters)
+  }, [filters])
+
+  const isDirty = JSON.stringify(filters) !== JSON.stringify(draftFilters)
+
   const handleLoadMore = () => {
     if (activeTab === "tour") {
       setVisibleCount((prev) => prev + 6)
@@ -101,57 +100,26 @@ export default function PackageWeb({ width }: PackageWT) {
     }
   }
 
-  const handleDurationChange = (value: string) => {
-    setSelectedDurations((prev) =>
-      prev.includes(value) ? prev.filter((v) => v !== value) : [...prev, value]
-    )
-  }
-
-  const handleLocationChange = (value: string) => {
-    setSelectedLocations((prev) =>
-      prev.includes(value) ? prev.filter((v) => v !== value) : [...prev, value]
-    )
-  }
-
-  const applyFilters = <
-    T extends {
-      price: number
-      duration: string
-      provinceCity: string
-    },
-  >(
-    list: T[]
-  ) => {
-    return list.filter((item) => {
-      const matchPrice =
-        item.price >= appliedFilters.range[0] &&
-        item.price <= appliedFilters.range[1]
-
-      const matchDuration =
-        appliedFilters.durations.length === 0 ||
-        appliedFilters.durations.includes(item.duration)
-
-      const matchLocation =
-        appliedFilters.locations.length === 0 ||
-        appliedFilters.locations.includes(item.provinceCity)
-
-      return matchPrice && matchDuration && matchLocation
-    })
-  }
-
   const handleApplyFilters = () => {
-    setAppliedFilters({
-      range: range as [number, number],
-      durations: selectedDurations,
-      locations: selectedLocations,
-    })
-
+    setFilters(draftFilters)
     setVisibleCount(6)
     setVisibleCountDeal(6)
   }
 
-  const filteredPackages = applyFilters(Packages)
-  const filteredDeals = applyFilters(LimitedDeal)
+  const handleResetFilters = () => {
+    setDraftFilters(defaultFilters)
+    setFilters(defaultFilters)
+    setVisibleCount(6)
+    setVisibleCountDeal(6)
+  }
+
+  const handleViewDetails = (id: number, index: number, tab: string) => {
+    setLoadingIndex(index)
+    router.push(`/packages/${tab === "tour" ? "tour" : "deals"}/${id}`)
+    setUserDetails({
+      typePackage: tab,
+    })
+  }
 
   useEffect(() => {
     const t = setTimeout(() => setLoadData(true), 500)
@@ -162,14 +130,6 @@ export default function PackageWeb({ width }: PackageWT) {
     activeTab === "tour"
       ? filteredPackages.length === 0
       : filteredDeals.length === 0
-
-  const handleViewDetails = (name: string, index: number, tab: string) => {
-    setLoadingIndex(index)
-    router.push(`/packages/${tab === "tour" ? "tour" : "deals"}/${name}`)
-    setUserDetails({
-      typePackage: tab,
-    })
-  }
 
   return (
     <div className="flex items-start gap-8">
@@ -200,24 +160,35 @@ export default function PackageWeb({ width }: PackageWT) {
           <div>
             <p className="py-2 text-sm font-semibold">Price Range</p>
             <div className="mb-2 flex justify-between text-sm font-medium">
-              <span>₱{range[0]?.toLocaleString()}</span>
-              <span>₱{range[1]?.toLocaleString()}</span>
+              <span>₱{draftFilters.range[0]?.toLocaleString()}</span>
+              <span>₱{draftFilters.range[1]?.toLocaleString()}</span>
             </div>
             <Slider
-              value={range}
-              onValueChange={setRange}
+              value={draftFilters.range}
+              onValueChange={(val) =>
+                setDraftFilters((prev) => ({
+                  ...prev,
+                  range: val as [number, number],
+                }))
+              }
               max={50000}
               step={500}
               className="mx-auto w-full max-w-xs"
             />
           </div>
+
           <div className="flex flex-col gap-2">
             <p className="py-2 text-sm font-semibold">Duration</p>
             {duration.map((_, i) => (
               <div key={i} className="flex items-center gap-2">
                 <Checkbox
-                  checked={selectedDurations.includes(_)}
-                  onCheckedChange={() => handleDurationChange(_)}
+                  checked={draftFilters.durations.includes(_)}
+                  onCheckedChange={() =>
+                    setDraftFilters((prev) => ({
+                      ...prev,
+                      durations: toggleValue(prev.durations, _),
+                    }))
+                  }
                   value={_}
                   id={_}
                   name={_}
@@ -227,21 +198,20 @@ export default function PackageWeb({ width }: PackageWT) {
                 </Label>
               </div>
             ))}
-            {/* <div className="flex items-end gap-2">
-              <p className="text-sm">Others</p>
-              <input
-                placeholder="e.g. 3D2N, 21D20N"
-                className="border-b-2 px-2 text-sm outline-0 transition duration-200 ease-in-out focus-visible:border-primary-purple-100"
-              ></input>
-            </div> */}
           </div>
+
           <div className="flex flex-col gap-2">
             <p className="py-2 text-sm font-semibold">Destinations</p>
             {locations.map((_, i) => (
               <div key={i} className="flex items-center gap-2">
                 <Checkbox
-                  checked={selectedLocations.includes(_)}
-                  onCheckedChange={() => handleLocationChange(_)}
+                  checked={draftFilters.locations.includes(_)}
+                  onCheckedChange={() =>
+                    setDraftFilters((prev) => ({
+                      ...prev,
+                      locations: toggleValue(prev.locations, _),
+                    }))
+                  }
                   value={_}
                   id={_}
                   name={_}
@@ -253,25 +223,18 @@ export default function PackageWeb({ width }: PackageWT) {
             ))}
           </div>
         </div>
+
         <div>
           <Button
             className="w-full"
-            onClick={
-              isFiltered
-                ? isChanged
-                  ? handleApplyFilters // update
-                  : handleResetFilters // reset
-                : handleApplyFilters // first apply
-            }
+            onClick={isDirty ? handleApplyFilters : handleResetFilters}
           >
-            {!isFiltered
-              ? "Apply Filter"
-              : isChanged
-                ? "Update Filter"
-                : "Reset Filter"}
+            {isDirty ? "Apply Filter" : "Reset Filter"}
           </Button>
         </div>
       </div>
+
+      {/* ⛔ EVERYTHING BELOW UNCHANGED (UI preserved) */}
 
       <div className="min-h-40 w-full rounded-2xl bg-white p-8 shadow-2xl shadow-primary-purple-100/30">
         <div className="flex min-h-170 w-full flex-wrap gap-8">
@@ -305,23 +268,23 @@ export default function PackageWeb({ width }: PackageWT) {
                   .slice(0, visibleCount)
                   .map((item, i) => (
                     <PackageCard
-                      onClick={() => handleViewDetails(item.name, i, "tour")}
+                      onClick={() => handleViewDetails(item.id, i, "tour")}
                       cardWidth={"w-93"}
                       data={item}
-                      key={i}
+                      key={item.id}
                       width={width}
                       loading={i === loadingIndex ? true : false}
                     ></PackageCard>
                   ))
               : filteredDeals
-                  .slice(0, visibleCount)
+                  .slice(0, visibleCountDeal)
                   .map((item, i) => (
                     <PackageDealCard
-                      onClick={() => handleViewDetails(item.name, i, "deal")}
+                      onClick={() => handleViewDetails(item.id, i, "deal")}
                       loading={i === loadingIndex ? true : false}
                       cardWidth={"w-93"}
                       data={item}
-                      key={i}
+                      key={item.id}
                       width={width}
                     ></PackageDealCard>
                   ))
@@ -332,6 +295,7 @@ export default function PackageWeb({ width }: PackageWT) {
                 ></Skeleton>
               ))}
         </div>
+
         {activeTab === "tour"
           ? visibleCount < filteredPackages.length && (
               <div className="mt-8 flex w-full items-center justify-center">
