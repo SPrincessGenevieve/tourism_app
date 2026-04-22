@@ -1,7 +1,12 @@
 "use client"
 
 import { PackageDealT, PackageT } from "@/lib/types"
-import { IconLaurelWreath, IconStarFilled, IconUser } from "@tabler/icons-react"
+import {
+  IconLaurelWreath,
+  IconMessage2,
+  IconStarFilled,
+  IconUser,
+} from "@tabler/icons-react"
 import React from "react"
 import {
   Avatar,
@@ -54,7 +59,16 @@ export default function PackageReview({
           </div>
         </div>
       </div>
-      <div className="w-full columns-1 gap-4 [column-gap:1rem] rounded-2xl border-2 border-gray-100 p-4 sm:columns-2 lg:columns-3">
+      <div className="relative min-h-50 w-full columns-1 gap-4 [column-gap:1rem] rounded-2xl border-2 border-gray-100 p-4 sm:columns-2 lg:columns-3">
+        {item.reviews?.length === 0 && (
+          <div className="absolute top-0 flex h-full w-full flex-col items-center justify-center gap-2">
+            <IconMessage2 size={40}></IconMessage2>
+            <div className="kic flex flex-col items-center">
+              <p className="font-semibold">All quiet for now</p>
+              <p className="text-gray-700">Check back later for updates.</p>
+            </div>
+          </div>
+        )}
         {item.reviews?.map((review, i) => (
           <div
             key={i}

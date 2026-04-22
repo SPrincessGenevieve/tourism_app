@@ -1,10 +1,10 @@
 export const pages = [
   {
-    link: "",
+    link: "/",
     label: "Home",
   },
   {
-    link: "",
+    link: "/packages",
     label: "Package",
   },
   {

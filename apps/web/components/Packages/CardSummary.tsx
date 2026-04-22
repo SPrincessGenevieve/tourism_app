@@ -12,6 +12,7 @@ import {
 } from "@workspace/ui/components/dropdown-menu"
 import Input from "@workspace/ui/components/input"
 import { PackageDealT, PackageT } from "@/lib/types"
+import { useRouter } from "next/navigation"
 
 type CardSummaryProps = {
   item?: PackageT | PackageDealT
@@ -45,6 +46,11 @@ export default function CardSummary({
         year: "numeric",
       })
     : "Select date"
+
+  const router = useRouter()
+  const handleReviewCheckout = (name: string) => {
+    router.push(`/packages/review/${name}`)
+  }
 
   return (
     <motion.div className="flex flex-col gap-2">
@@ -121,7 +127,10 @@ export default function CardSummary({
           transition={{ duration: 0.4, ease: "easeInOut" }}
           className="mt-4 flex w-full flex-col gap-2 overflow-hidden"
         >
-          <Button className="w-full">
+          <Button
+            onClick={() => handleReviewCheckout(item?.name!)}
+            className="w-full"
+          >
             <IconBook /> Book Now
           </Button>
 
@@ -138,6 +147,11 @@ export default function CardSummary({
             {isSaved ? "Saved" : "Save"} to Wishlist
           </Button>
         </motion.div>
+        <div className="flex w-full items-center justify-center">
+          <p className="w-80 pt-4 text-center text-sm">
+            You won't be charge yet. Review your booking details first.
+          </p>
+        </div>
       </div>
     </motion.div>
   )

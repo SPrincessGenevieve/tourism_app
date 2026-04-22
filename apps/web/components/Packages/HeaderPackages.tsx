@@ -13,7 +13,7 @@ import React from "react"
 
 export default function HeaderPackages() {
   return (
-    <div className="relative flex h-80 w-full bg-pink-400">
+    <div className="relative flex h-80 w-full bg-cyan-400">
       <div className="absolute z-20 flex h-full w-full flex-col justify-center gap-4 p-8">
         <div>
           <p className="text-3xl font-semibold text-white">

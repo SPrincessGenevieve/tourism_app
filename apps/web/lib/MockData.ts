@@ -861,20 +861,25 @@ export const Packages: PackageT[] = [
       "https://i.pinimg.com/564x/15/b6/b6/15b6b6aeb506499cb86c98039f5606ca.jpg",
     highlights: [
       "https://davao.bluelineph.com/wp-content/uploads/sites/51/2023/05/Yakan-1.jpg",
-      "https://images.hive.blog/0x0/https://files.steempeak.com/file/steempeak/diosarich/zJC3UVC5-seashore20pink20beach1.jpg",
+      "https://thebucketlistmermaid.com/wp-content/uploads/2023/06/pink-beach-komodo-islands.jpg",
     ],
     duration: "10D9N",
     itinerary: [
       {
         day: 1,
         activities: ["Arrival", "Check-in at Ciudad Hotel Zamboanga"],
-        images: [],
+        images: [
+          "https://2.bp.blogspot.com/-O4Y6npjzcw4/Uxfnglrcs8I/AAAAAAAA2x0/yz7lhGe-6O0/s1600/LM+Metro+Hotel+of+Zamboanga.JPG",
+        ],
         description:
           "Bienvenido a Zamboanga! Upon your <strong>Arrival</strong>, you will be greeted by the warm breeze of the peninsula. Enjoy a smooth <strong>Check-in at Ciudad Hotel Zamboanga</strong>, an elegant retreat that reflects the city's unique blend of Spanish and Filipino aesthetics. Take the evening to settle into your suite and enjoy the refined ambiance of one of the city's most storied hotels.",
       },
       {
         day: 2,
-        images: [],
+        images: [
+          "https://3.bp.blogspot.com/-owWIKwL8O5k/Tp4ODNp0XAI/AAAAAAAAAxM/fIm9LCI01Ow/s1600/Fort+Pilar+%25282%2529.JPG",
+          "https://i.pinimg.com/originals/8a/c0/2a/8ac02a6df909412f0d38a40a7aea961a.jpg",
+        ],
         description:
           "Step back in time with a <strong>Fort Pilar historical tour</strong>. This 17th-century Spanish military defense fortress is now a major landmark and an open-air shrine. Afterward, continue with a <strong>City heritage walk</strong>, where you’ll hear the local <i>Chavacano</i> language spoken—a Spanish-based creole that makes this city unique in Asia. You'll pass by colonial-style buildings that tell the tale of the city's vibrant past.",
         activities: ["Fort Pilar historical tour", "City heritage walk"],
@@ -882,28 +887,39 @@ export const Packages: PackageT[] = [
       {
         day: 3,
         activities: ["Yakan Village cultural immersion"],
-        images: [],
+        images: [
+          "https://www.zamboangarentacar.com/wp-content/uploads/2023/05/Yakan-1.jpg",
+          "https://thenationalpolicy.com/wp-content/uploads/2024/05/438267377_1892649844509526_4138024483596690496_n.jpg",
+          "https://scontent.fceb10-1.fna.fbcdn.net/v/t39.30808-6/488932717_10162518370031489_4381079940041340715_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=dd6889&_nc_eui2=AeFLd-QzqgUymr5N22JYO1OeQzQhUxSOZmdDNCFTFI5mZ1FPVkxGjJRaAq36-ToIxnXuN5vRBd8IY9m8a3wiEOjN&_nc_ohc=AY0rv50Xkt0Q7kNvwGWSYYs&_nc_oc=AdrqBqVHxD4VhroYnMGO0ZcbKtn2Y7QCQMhPVqlbjcwxIVh6UVStzoE-XuRJyBmL2Mc&_nc_zt=23&_nc_ht=scontent.fceb10-1.fna&_nc_gid=tLnpXDvSOM8MoeUnKWdU6Q&_nc_ss=7a3a8&oh=00_Af3wDHnKHiXBiz6tJu9-2HJeIRk6NS5HasfdmWZPB4n72A&oe=69ECC8A0",
+        ],
         description:
           "Experience a <strong>Yakan Village cultural immersion</strong>. Here, you will meet the indigenous Yakan weavers and witness the intricate process of creating <i>Tennun</i>—traditional hand-woven cloth known for its geometric patterns and bold colors. It is a rare opportunity to engage with the master artisans and bring home a piece of living history.",
       },
       {
         day: 4,
         activities: ["Private boat to Great Santa Cruz Island"],
-        images: [],
+        images: [
+          "https://www.andbeyond.com/wp-content/uploads/sites/5/Santa-Cruz-II-Exterior.jpg",
+        ],
         description:
           "Board a <strong>Private boat to Great Santa Cruz Island</strong>. This exclusive voyage takes you across the Basilan Strait to one of the most unique islands in the world. As you approach, you'll notice the <i>distinctive pink hue</i> of the shoreline, created by the pulverized red organ pipe coral mixed with white sand. Your private setup ensures a serene start to your island getaway.",
       },
       {
         day: 5,
         activities: ["Pink Beach relaxation day"],
-        images: [],
+        images: [
+          "https://scontent.fceb10-1.fna.fbcdn.net/v/t39.30808-6/309609401_429763875923421_2069246932611994858_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeFh2VWhTM4GMdr3d1IiYjrapG0nsbpXHIKkbSexulccggWyX0RdgSZfViM4oWcU5ze9qeTPnu2mGQI6uVDUYyUj&_nc_ohc=qlc-JJ4vUGcQ7kNvwFG5c1G&_nc_oc=AdrXRGtY4O0yJ-jrKWe8i7mVmHm5mBNN0uLXjPPYj4-06LunuEmjPTheLiV_J9xL8X0&_nc_zt=23&_nc_ht=scontent.fceb10-1.fna&_nc_gid=NPPpNtAhseA8od5kXVgIqA&_nc_ss=7a3a8&oh=00_Af2l1mlhDCbRcTTFQHv0OsLV3jhbyDYl8kgTVPEt48bjUQ&oe=69ECDFFA",
+          "https://wallpapers.com/images/hd/pink-beach-aesthetic-lfo0388pmcw7u36i.jpg",
+        ],
         description:
           "Board a <strong>Private boat to Great Santa Cruz Island</strong>. This exclusive voyage takes you across the Basilan Strait to one of the most unique islands in the world. As you approach, you'll notice the <i>distinctive pink hue</i> of the shoreline, created by the pulverized red organ pipe coral mixed with white sand. Your private setup ensures a serene start to your island getaway.",
       },
       {
         day: 6,
         activities: ["Island hopping private tour"],
-        images: [],
+        images: [
+          "https://cdn.thecrazytourist.com/wp-content/uploads/2017/10/Island-Hopping-1024x768.jpg",
+        ],
         description:
           "Embark on an <strong>Island hopping private tour</strong> to discover the surrounding islets. From the sandbars of Little Santa Cruz Island to the thriving mangrove forests, your private guide will lead you to the best spots for <i>snorkeling and bird watching</i>. The biodiversity in these protected waters is truly world-class.",
       },

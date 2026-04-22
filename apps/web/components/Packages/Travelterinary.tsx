@@ -35,6 +35,7 @@ export default function Travelterinary({
                   Day {i + 1}
                 </p>
               </div>
+              <PackageActivities item={item2}></PackageActivities>
               <PackageGallery
                 images={itineraryGallery ?? []}
                 onImageClick={onImageClick}
@@ -47,7 +48,6 @@ export default function Travelterinary({
                   }}
                 />
               </div>
-              <PackageActivities item={item2}></PackageActivities>
             </div>
           )
         })}
