@@ -237,7 +237,9 @@ export default function PackageWeb({ width }: PackageWT) {
       {/* ⛔ EVERYTHING BELOW UNCHANGED (UI preserved) */}
 
       <div className="min-h-40 w-full rounded-2xl bg-white p-8 shadow-2xl shadow-primary-purple-100/30">
-        <div className="flex min-h-170 w-full flex-wrap justify-evenly gap-8">
+        <div
+          className={`flex min-h-170 w-full flex-wrap ${width > 1390 ? "" : "justify-evenly"} gap-8`}
+        >
           {isEmpty && (
             <div className="flex h-full min-h-170 w-full flex-col items-center justify-center gap-4 bg-white p-4">
               <IconPackage size={40} strokeWidth={1} />
