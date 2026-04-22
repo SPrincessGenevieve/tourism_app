@@ -113,7 +113,7 @@ export default function WebSearch() {
           >
             <div className="flex w-full gap-4">
               {SearchFields.map((item, i) => (
-                <InputGroup className="" key={i}>
+                <InputGroup className="gap-2 p-2" key={i}>
                   {i === 1 ? (
                     <DropdownMenu key={i}>
                       <DropdownMenuTrigger className="flex h-10 w-[85%]">

@@ -121,6 +121,7 @@ function InputGroupInput({
   return (
     <Input
       data-slot="input-group-control"
+      containerClassName="w-full "
       className={cn(
         "h-8 w-full border-0 border-transparent p-2 focus:border-transparent",
         className

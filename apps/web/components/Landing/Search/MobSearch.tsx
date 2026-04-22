@@ -18,6 +18,7 @@ import {
 import Image from "next/image"
 import React, { useRef } from "react"
 import { motion } from "motion/react"
+import Input from "@workspace/ui/components/input"
 
 export default function MobSearch() {
   const hasAnimated = useRef(false)
@@ -132,33 +133,37 @@ export default function MobSearch() {
           className={`${width > 515 ? "absolute" : "flex"} flex w-full flex-wrap gap-4 rounded-2xl bg-white/70 p-4 shadow-[0px_0px_10px_4px_rgba(1,89,153,0.2)]`}
         >
           <div className="flex w-full flex-col gap-4">
-            <InputGroup className="">
+            <InputGroup className="gap-2 p-2">
               <InputGroupInput
                 type={SearchFields[0]?.type}
                 placeholder={SearchFields[0]?.label}
-                className="w-full max-w-50 text-sm"
+                className="w-full text-sm"
               ></InputGroupInput>
               <InputGroupAddon>
                 <IconMapPin></IconMapPin>
               </InputGroupAddon>
             </InputGroup>
-            <div className="flex gap-4">
+            <div className={`flex gap-4 ${width > 560 ? "" : "flex-col"}`}>
               {SearchFields.map(
                 (item, i) =>
                   i > 0 && (
-                    <InputGroup className="" key={i}>
+                    <InputGroup className="gap-2 p-2" key={i}>
                       {i === 1 ? (
                         <DropdownMenu key={i}>
-                          <DropdownMenuTrigger className="flex h-10 w-[85%] min-w-40">
-                            <p className="flex h-full w-full items-center pl-4 text-left text-sm">
-                              {travelDate
-                                ? travelDate.toLocaleDateString("en-US", {
-                                    month: "short",
-                                    day: "numeric",
-                                    year: "numeric",
-                                  })
-                                : "Select date"}
-                            </p>
+                          <DropdownMenuTrigger className="flex h-10 w-full min-w-40 items-center p-0">
+                            <Input
+                              className="h-8 w-full"
+                              containerClassName="w-full"
+                              value={
+                                travelDate
+                                  ? travelDate.toLocaleDateString("en-US", {
+                                      month: "short",
+                                      day: "numeric",
+                                      year: "numeric",
+                                    })
+                                  : "Select date"
+                              }
+                            ></Input>
                           </DropdownMenuTrigger>
                           <DropdownMenuContent className="w-full">
                             <Calendar
@@ -174,7 +179,7 @@ export default function MobSearch() {
                         <InputGroupInput
                           type={item.type}
                           placeholder={item.label}
-                          className="w-full max-w-50 text-sm"
+                          className="w-full text-sm"
                         ></InputGroupInput>
                       )}
                       <InputGroupAddon>
