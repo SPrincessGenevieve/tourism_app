@@ -25,7 +25,7 @@ export default function PackageReview({
   item: PackageT | PackageDealT
 }) {
   const [activeImage, setActiveImage] = React.useState<string | null>(null)
-  console.log("ITEMs: ", item.reviews)
+
   return (
     <div className="mb-8 flex flex-col gap-4">
       <div
@@ -59,7 +59,7 @@ export default function PackageReview({
           </div>
         </div>
       </div>
-      {item.reviews?.length === 0 ? (
+      {item?.reviews?.length === 0 ? (
         <div className="relative min-h-50 w-full gap-4 rounded-2xl border-2 border-gray-100 bg-[red] p-4">
           <div className="absolute top-0 flex h-full w-full flex-col items-center justify-center gap-2">
             <IconMessage2 size={40}></IconMessage2>
@@ -71,7 +71,7 @@ export default function PackageReview({
         </div>
       ) : (
         <div className="relative min-h-50 w-full columns-1 gap-4 [column-gap:1rem] rounded-2xl border-2 border-gray-100 p-4 sm:columns-2 lg:columns-3">
-          {item.reviews?.map((review, i) => (
+          {item?.reviews?.map((review, i) => (
             <div
               key={i}
               className="mb-4 break-inside-avoid rounded-2xl border bg-primary-purple-100/5 p-4"

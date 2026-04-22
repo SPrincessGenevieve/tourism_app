@@ -13,7 +13,7 @@ export default function PackageInclusion({ item }: TravelterinaryProps) {
     <div className="flex h-full flex-col gap-4">
       <p className="text-2xl font-semibold">Inclusions</p>
       <div className="flex flex-col gap-2">
-        {item.inclusion.map((item2, i) => (
+        {item?.inclusion?.map((item2, i) => (
           <div key={i} className="flex items-center gap-2">
             <IconHotelService strokeWidth={1}></IconHotelService>
             <p className="text-gray-700">{item2}</p>
